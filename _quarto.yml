@@ -1,0 +1,26 @@
+project: 
+  type: book
+  output-dir: docs 
+
+book:
+  title: "CASA0023 Learning Diary"
+  author: "Yundi LIU"
+  date: "2025/1/25"
+  chapters:
+    - index.qmd
+    - Wk1_Introduction_to_remote_sensing.qmd
+    - Wk2_Presentation.qmd
+    - Wk3_Corrections.qmd
+    - Wk4_Policy.qmd
+    - Wk6_GEE.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
