@@ -2,117 +2,71 @@
 title: "Remote Sensing Data & Corrections"
 output: html_document  
 ---
+
 ## Summary
 
-In this lecture, I learned about the fundamentals of remote sensing,
-focusing on data acquisition, sensor technologies, data processing, and
-their applications in urban and environmental studies. The session was
-divided into two main parts: image correction and data mosaicing and
-enhancement. Below are the key takeaways:
+In this lecture, I learned about the fundamentals of remote sensing, focusing on data acquisition, sensor technologies, data processing, and their applications in urban and environmental studies. The session was divided into two main parts: image correction and data mosaicing and enhancement. Below are the key takeaways:
 
 ### Sensor Types and Mechanisms
 
-Remote sensing sensors are at the core of remote sensing technology, and
-different types of sensors employ different imaging mechanisms. The
-following table compares two common types of sensors:
+Remote sensing sensors are at the core of remote sensing technology, and different types of sensors employ different imaging mechanisms. The following table compares two common types of sensors:
 
 | Sensor Type                       | Working Principle                                                                     | Pros & Cons                                       |
-|-----------------|-----------------------------------|--------------------|
+|------------------|----------------------------------|--------------------|
 | Whisk broom (cross-track scanner) | Uses a rotating mirror to reflect light onto a single detector, covering a large area | Wide coverage, but moving parts can wear out      |
 | Push broom (along-track scanner)  | Uses detector arrays for faster and more efficient imaging                            | High efficiency, but requires precise calibration |
 | MSS (Multispectral Scanner)       | Uses a digital approach to capture multispectral data (visible + near-infrared)       | Provides better data continuity and accuracy      |
 
-Through these different sensor technologies, remote sensing systems are
-able to capture various types of land feature data based on specific
-needs.
+Through these different sensor technologies, remote sensing systems are able to capture various types of land feature data based on specific needs.
 
 ### Data Correction Process
 
-Satellite imagery often requires correction before it can be used for
-analysis. The following diagram shows the typical correction process:
+Satellite imagery often requires correction before it can be used for analysis. The typical correction process:
 
--   Start with a Raw Satellite Image.
+1.  Start with a Raw Satellite Image.
+2.  Perform Geometric Correction to fix distortions caused by sensor motion or the Earth's curvature.
+3.  Apply Atmospheric Correction to remove haze or scattering effects, for example, using dark object subtraction.
+4.  Proceed with Terrain Correction to adjust for elevation differences, such as through orthorectification.
 
--   Perform Geometric Correction to fix distortions caused by sensor
-    motion or the Earth's curvature.
-
--   Apply Atmospheric Correction to remove haze or scattering effects,
-    for example, using dark object subtraction.
-
--   Proceed with Terrain Correction to adjust for elevation differences,
-    such as through orthorectification.
-
-Data correction is a crucial first step to ensure the accuracy and
-usability of remote sensing imagery. By applying geometric correction,
-atmospheric correction, and terrain correction, we can eliminate
-external disturbances and improve the precision of the data.
+Data correction is a crucial first step to ensure the accuracy and usability of remote sensing imagery. By applying geometric correction, atmospheric correction, and terrain correction, we can eliminate external disturbances and improve the precision of the data.
 
 ### Data Mosaicing and Enhancement
 
-Mosaicing and enhancement techniques are vital for improving remote
-sensing imagery, especially for urban and environmental studies.
-However, these techniques must be chosen based on the specific needs of
-the study. Standard mosaicing methods may not always be suitable for
-satellite imagery, as there can be discrepancies in lighting and
-radiometric calibration between images.
+Mosaicing and enhancement techniques are vital for improving remote sensing imagery, especially for urban and environmental studies. However, these techniques must be chosen based on the specific needs of the study. Standard mosaicing methods may not always be suitable for satellite imagery, as there can be discrepancies in lighting and radiometric calibration between images.
 
 | Enhancement Method        | Description                                      | Challenges in Urban Applications                       |
-|-----------------|--------------------------|-----------------------------|
+|------------------|--------------------------|----------------------------|
 | **Mosaicing**             | Combines multiple images into one seamless image | Standard methods may cause radiometric inconsistencies |
 | **Contrast Enhancement**  | Improves clarity by enhancing feature contrast   | May over-complicate images, hindering research         |
 | **Creating New Datasets** | Uses band composition/feature extraction         | High computational load and analysis complexity        |
 
-These enhancement methods can improve image contrast and clarity,
-helping to analyze land cover changes more effectively. However, whether
-added complexity truly benefits the research objectives needs careful
-consideration.
+These enhancement methods can improve image contrast and clarity, helping to analyze land cover changes more effectively. However, whether added complexity truly benefits the research objectives needs careful consideration.
 
 ------------------------------------------------------------------------
 
 ## Applications
 
-Landsat satellites, providing over 50 years of Earth observation data
-since 1972, have had a profound impact on monitoring urban growth,
-deforestation, temperature changes, and more.
+Landsat satellites, providing over 50 years of Earth observation data since 1972, have had a profound impact on monitoring urban growth, deforestation, temperature changes, and more.
 
 ### Urban Growth & Land Use Mapping
 
-One of the most powerful applications of remote sensing is its ability
-to monitor urban growth and land use changes over time. Satellites like
-Landsat and Sentinel-2 have been invaluable in tracking the
-transformation of landscapes, especially as urban areas expand. The
-integration of Landsat with other datasets, like Sentinel-2 through the
-Dynamic World project, enables near-real-time land cover mapping, which
-is crucial for monitoring urbanization, deforestation, and the spread of
-infrastructure. For example, through the combination of these datasets,
-researchers can track the extent of urban sprawl, assess changes in
-built-up areas, and even identify shifts in the types of land cover
-(e.g., from agriculture to residential). This kind of information is
-vital for city planners and policymakers in managing sustainable urban
-growth and mitigating the environmental impact of development.
-Additionally, urban heat islands, a key environmental concern in cities,
-can be monitored using thermal infrared data, which helps identify
-regions that are overheating due to dense urbanization and limited
-vegetation.
+One of the most powerful applications of remote sensing is its ability to monitor urban growth and land use changes over time. Satellites like Landsat and Sentinel-2 have been invaluable in tracking the transformation of landscapes, especially as urban areas expand. The integration of Landsat with other datasets, like Sentinel-2 through the Dynamic World project, enables near-real-time land cover mapping, which is crucial for monitoring urbanization, deforestation, and the spread of infrastructure. For example, through the combination of these datasets, researchers can track the extent of urban sprawl, assess changes in built-up areas, and even identify shifts in the types of land cover (e.g., from agriculture to residential). This kind of information is vital for city planners and policymakers in managing sustainable urban growth and mitigating the environmental impact of development. Additionally, urban heat islands, a key environmental concern in cities, can be monitored using thermal infrared data, which helps identify regions that are overheating due to dense urbanization and limited vegetation.
 
 ### Environmental Monitoring & Disaster Response
 
-Remote sensing also plays a critical role in environmental monitoring,
-particularly in disaster response and management. Landsat and Sentinel-2
-satellites have been used extensively to monitor wildfires, floods, and
-changes in ecosystems. For example, Landsat’s long-term data series
-allows for the analysis of wildfire spread and recovery over decades.
-These data sets provide valuable insights into the impact of fire on
-vegetation and soil, and how these ecosystems recover over time.
-Similarly, Sentinel-2's high temporal resolution makes it an excellent
-tool for monitoring environmental changes more frequently, such as
-detecting the early stages of flooding or tracking the aftermath ofS
-extreme weather events. Remote sensing also supports vegetation health
-monitoring by detecting anomalies in plant reflectance, particularly
-using the near-infrared spectrum, which is sensitive to plant stress.
-This capability is essential for agriculture, forestry, and conservation
-efforts, enabling early intervention when vegetation shows signs of
-degradation, drought, or pest infestations.
+Remote sensing also plays a critical role in environmental monitoring, particularly in disaster response and management. Landsat and Sentinel-2 satellites have been used extensively to monitor wildfires, floods, and changes in ecosystems. For example, Landsat’s long-term data series allows for the analysis of wildfire spread and recovery over decades. These data sets provide valuable insights into the impact of fire on vegetation and soil, and how these ecosystems recover over time. Similarly, Sentinel-2's high temporal resolution makes it an excellent tool for monitoring environmental changes more frequently, such as detecting the early stages of flooding or tracking the aftermath ofS extreme weather events. Remote sensing also supports vegetation health monitoring by detecting anomalies in plant reflectance, particularly using the near-infrared spectrum, which is sensitive to plant stress. This capability is essential for agriculture, forestry, and conservation efforts, enabling early intervention when vegetation shows signs of degradation, drought, or pest infestations.
+
+![](https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs44288-024-00042-0/MediaObjects/44288_2024_42_Fig3_HTML.png?as=webp) Applications of geo-computational techniques in flood disaster management [Source：Jain, H. (2024)](https://link.springer.com/article/10.1007/s44288-024-00042-0)
+
+**References**:
+
+Chen, Y. & Yu, S. (2016) Assessment of urban growth in Guangzhou using multi-temporal, multi-sensor Landsat data to quantify and map impervious surfaces. International journal of remote sensing. \[Online\] 37 (24), 5936–5952.
+
+Im, J. et al. (2020) Advances in Remote Sensing-based Disaster Monitoring and Assessment. Basel, Switzerland: MDPI - Multidisciplinary Digital Publishing Institute.
+
+Jain, H. (2024) Leveraging geo-computational innovations for sustainable disaster management to enhance flood resilience. Discover Geoscience. \[Online\] 2 (1), 1–22.
+
+Musznicki, B. et al. (2022) Modeling Real-Life Urban Sensor Networks Based on Open Data. Sensors (Basel, Switzerland). \[Online\] 22 (23), 9264-.
 
 ------------------------------------------------------------------------
 
