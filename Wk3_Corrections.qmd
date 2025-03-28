@@ -1,9 +1,9 @@
 ---
-title: "Wk3_Corrections"
+title: "Remote Sensing Data & Corrections"
 output: html_document  
 ---
 
-# Classification I
+# Remote Sensing Data & Corrections
 
 ## Summary
 

@@ -1,5 +1,5 @@
 ---
-title: "Wk1_Introduction_to_remote_sensing"
+title: "Introduction"
 format: html
 ---
 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.29)  29 MAR 2025 01:01
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.29)  29 MAR 2025 01:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1023,7 +1023,7 @@ File: index_files/mediabag/NDVI.jpg Graphic file (type bmp)
 ! Unable to load picture or PDF file 'index_files/mediabag/remotesensing-12-016.jpg'.
 <to be read again> 
                    }
-l.979 ..._files/mediabag/remotesensing-12-016.jpg}
+l.981 ..._files/mediabag/remotesensing-12-016.jpg}
                                                   
 The requested image couldn't be read because
 it was not a recognized image format.
