@@ -9,33 +9,13 @@ format: html
 
 This is my learning diary for CASA0023. It contains weekly reflections and notes on various topics.
 
--   **Week 1:** Introduction to remote sensing\
--   **Week 2:** Presentation on sensors\
--   **Week 3:** Corrections and feedback\
--   **Week 4:** Policy discussion\
+-   **Week 1:** Introduction to remote sensing
+-   **Week 2:** Presentation on sensors
+-   **Week 3:** Corrections and feedback
+-   **Week 4:** Policy discussion
 -   **Week 6:** Google Earth Engine analysis
+-   **Week 7:** Classification I
+-   **Week 8:** Classification II
+-   **Week 9:** Synthetic Aperture Radar (SAR)
 
-**References and additional materials** are included at the end.
-
-------------------------------------------------------------------------
-
-## Quarto
-
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
-
-## Running Code
-
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
-
-```{r}
-1 + 1
-```
-
-You can add options to executable code like this
-
-```{r}
-#| echo: false
-2 * 2
-```
-
-The `echo: false` option disables the printing of code (only output is displayed).
+**References and additional materials** are included at the end of each note.

@@ -2,10 +2,14 @@
 title: "Wk2_Presentation"
 format: html
 ---
+
+# 2 Presentation
+
 These are the introduction slides for the sensor ASTER(Advanced Spaceborne Thermal Emission and Reflection Radiometer)
 
 ```{r echo = FALSE}
-xaringanExtra::embed_xaringan(url = "https://github.com/lydia0930/CASA0023xaringan/blob/main/w2-slides.html",
+xaringanExtra::embed_xaringan(url = "https://lydia0930.github.io/CASA0023xaringan/w2-slides.html",
                               ratio = "4:3")
 ```
-Or use this [Link](https://github.com/lydia0930/CASA0023xaringan/blob/main/w2-slides.html){.uri}
+
+Or use this [Link](https://lydia0930.github.io/CASA0023xaringan/w2-slides.html){.uri}

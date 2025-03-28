@@ -3,23 +3,61 @@ title: "Wk1_Introduction_to_remote_sensing"
 format: html
 ---
 
-## Quarto111111111111
+# 1 An Introduction to Remote Sensing
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+## 1.1 Summary
 
-## Running Code
+### 1.1.1 Definition of remote sensing
 
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+Remote sensing is the science of obtaining information about objects or areas from a distance using sensors that detect electromagnetic radiation. The electromagnetic spectrum is crucial to understanding which wavelengths are useful for different applications. The key diagram to include would be the electromagnetic spectrum chart showing different wavelengths and their applications in remote sensing.
 
-```{r}
-1 + 1
-```
+### 1.1.2. Resolution Types in Remote Sensing
 
-You can add options to executable code like this
+The four essential resolution types determine what can be detected:
 
-```{r}
-#| echo: false
-2 * 2
-```
+| Type                   | Definition                                             |
+|----------------------|--------------------------------------------------|
+| Spatial resolution     | The size of one pixel in ground units                  |
+| Spectral resolution    | Number and width of spectral bands                     |
+| Temporal resolution    | How often data is collected                            |
+| Radiometric resolution | Sensitivity to differences in reflected/emitted energy |
 
-The `echo: false` option disables the printing of code (only output is displayed).
+It Includes the comparative images showing the same area captured at different spatial resolutions (e.g., 30m vs. 10m) to illustrate how detail changes.
+
+### 1.1.3. Satellite Systems and Their Applications
+
+Major satellite programs like Landsat (historical importance since 1972) and Sentinel (newer European missions) provide different capabilities for urban monitoring. The lecture highlights specifications including revisit time, spatial resolution, and spectral bands. Include the satellite timeline diagram showing the evolution of Earth observation satellites and their operational periods.
+
+### 1.1.4. Urban Remote Sensing Applications
+
+Remote sensing enables monitoring urban environments through applications like land use classification, urban heat island detection, and change detection over time. The thermal imagery showing urban heat islands and comparison images of urban growth over decades would be essential visuals.
+
+------------------------------------------------------------------------
+
+## 1.2 Applications
+
+In my research on remote sensing applications, I have found that these technologies provide tools for understanding the urban environment.
+
+How land use mapping is changing urban planning is one such application. By analyzing imagery over time, we can track patterns of sprawl and even identify informal settlements that traditional surveys might miss. This capability is important for rapidly growing cities facing housing challenges. Advanced machine learning techniques like object-based image analysis (OBIA) now enable automatic classification of urban morphology with accuracy exceeding 85%, allowing planners to quantify not just expansion but also densification processes.
+
+In addition to this, urban heat island analysis applications are also one of the options as climate issues become more serious. I find it compelling that heat sensors can accurately identify hot spots that need intervention. NASA Earth Observatory documents a clear pattern of temperature differences of up to 10°C between urban and rural areas (NASA Earth Observatory, 2021). This could change the way we approach urban greening initiatives. Thermal infrared bands on satellites like Landsat 8 (bands 10-11) and ECOSTRESS provide surface temperature data at resolutions fine enough to correlate UHI intensity with specific urban features and materials.
+
+Finally, remote sensing appears to have the most significant impact in disaster management applications. Its ability to provide timely information throughout the disaster cycle - from vulnerability mapping to response guidance and damage assessment - can save countless lives and improve recovery efforts. For example, floods, hill fires, and crop damage can all be assessed and predicted accordingly. Synthetic Aperture Radar (SAR) sensors like those on Sentinel-1 have revolutionized disaster monitoring by providing cloud-penetrating imagery day or night, enabling near real-time flood extent mapping even during severe weather conditions when optical sensors fail.
+
+![](https://eoimages.gsfc.nasa.gov/images/imagerecords/145000/145305/denmark_oli_1985-2013_lrg.png) The relationship between green space and relative mental health [Source: NASA Earth Observatory](https://earthobservatory.nasa.gov/images/145305/summer-heat-shifts-to-europe)
+
+------------------------------------------------------------------------
+
+## 1.3 Reflection
+
+As I engaged with the fundamentals of remote sensing, several thoughtful connections emerged about this technology's place in science and society.
+
+The evolution of Earth observation technology is remarkable - from early Landsat missions to today's specialized satellite constellations. This progression mirrors other scientific fields where technological advancement has transformed understanding, with remote sensing uniquely turning our technological gaze back toward Earth itself.
+
+The concept of different resolutions highlighted an important philosophical point about observation. Our choice of resolution determines what patterns become visible - broad land cover at coarse resolution, individual buildings at finer scales. This reinforces that all scientific observation involves choices about scale that fundamentally shape understanding.
+
+The democratization of satellite imagery particularly interests me. What was once the exclusive domain of governments and corporations is increasingly accessible, creating new possibilities for citizen science and community monitoring. This shift raises important questions about who gets to observe our environment and whose perspectives inform the resulting narratives.
+
+I found myself contemplating how remote sensing changes our relationship with cities. The bird's-eye perspective offers insights unavailable to most urban dwellers yet differs significantly from lived experiences at street level. How might these different ways of knowing be integrated for more comprehensive urban understanding?
+
+Moving forward in this course, I'm particularly interested in exploring how remote sensing data intersects with local knowledge and qualitative understanding of places. The most valuable insights likely emerge when technological observation and human experience are brought into thoughtful conversation rather than treated as separate domains.

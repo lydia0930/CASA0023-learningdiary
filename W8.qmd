@@ -8,100 +8,43 @@ editor: visual
 
 ## 7.1 Summary
 
-### Evolution of Data Processing Methods
+In this week's lecture, we explored the evolution of data processing methods in remote sensing, starting with traditional pixel-based analysis and progressing to more advanced techniques.
 
-1.Pixel-based Analysis
+-   **Pixel-based Analysis**: Early remote sensing relied on pixel-based analysis, where each pixel was classified based on its spectral characteristics. While this method was a starting point, it had limitations when dealing with complex land surfaces. Each pixel was treated independently, failing to account for neighboring spatial patterns.
 
-Traditional remote sensing image analysis began with the most basic pixel-based methods. Each pixel was treated as an independent analysis unit, classified based on its spectral characteristics. However, this approach showed clear limitations when dealing with complex land surfaces.
+-   **Sub-pixel Analysis**: To improve upon pixel-based methods, sub-pixel analysis was introduced. This approach assumes that each pixel's spectral reflectance is a mixture of multiple land cover types. Spectral Mixture Analysis (SMA) decomposes the spectral features within pixels and estimates the proportions of different land cover types, making it more effective for analyzing mixed land surfaces.
 
-```{r}
-# Placeholder for pixel-based analysis code
-library(raster)
-# Example analysis code could be added here
-```
+-   **Object-Based Image Analysis (OBIA)**: A significant advancement, OBIA groups neighboring pixels into objects, improving classification accuracy by considering spatial and spectral characteristics together. One common algorithm used in OBIA is the SLIC (Simple Linear Iterative Clustering) algorithm, which divides an image into superpixels that are more meaningful for analysis.
 
-2.  Sub-pixel Analysis
+![](https://www.researchgate.net/profile/Colin-Brooks-2/publication/254599984/figure/fig5/AS:669495500742674@1536631574657/Comparison-of-traditional-pixel-based-classification-vs-newer-object-based.ppm) Comparison of traditional pixel-based classification vs. newer object-based classification for part of the Tiffin River study area [Source](https://www.researchgate.net/figure/Comparison-of-traditional-pixel-based-classification-vs-newer-object-based_fig5_254599984)
 
-To address the complexity within pixels, sub-pixel analysis emerged. This method assumes that each pixel's spectral reflectance is a linear combination of multiple spectral endmembers.
+-   **Accuracy Assessment**: To evaluate the performance of classification models, several accuracy assessment methods are used:
 
-Key Technology: Spectral Mixture Analysis (SMA) - Decompose spectral features within pixels - Determine precise proportions of different land cover types
+1.  Confusion Matrix: A key tool for understanding classification errors.
 
-```{python}
-# Placeholder for sub-pixel analysis code
-import numpy as np
-# Spectral mixture analysis implementation
-```
+2.  ROC Curve Analysis: Provides a graphical representation of model performance, with a higher AUROC value indicating better model performance.
 
-3.  Object-Based Image Analysis (OBIA)
+3.  Spatial Cross-Validation: Unlike traditional cross-validation, spatial cross-validation ensures that training and test sets are spatially separated to avoid spatial autocorrelation and "spatial cheating," which can lead to biased results.
 
-Object-based image analysis represents a significant breakthrough in remote sensing data processing. Instead of treating pixels as isolated units, it clusters adjacent pixels into meaningful objects.
+-   **Overfitting Considerations**: A key challenge in machine learning is overfitting, where models perform well on training data but fail to generalize to new data. To avoid overfitting, it's important to: Choose appropriate methods based on data characteristics. Select the right number of endmembers for sub-pixel analysis. Use multiple accuracy metrics and account for spatial autocorrelation.
 
-SLIC Algorithm Workflow: 1. Initialize superpixel center points 2. Calculate spatial and color distance between pixels and center points 3. Assign pixels to the nearest center 4. Iteratively update center points
-
-### Accuracy Assessment Methods
-
-1.  Confusion Matrix
-
-The confusion matrix is a crucial tool for evaluating classification model performance.
-
-```{r}
-# Example confusion matrix creation
-library(caret)
-# Confusion matrix code could be added here
-```
-
-2.  ROC Curve Analysis
-
-The Receiver Operating Characteristic (ROC) curve provides a graphical representation of model performance.
-
--   X-axis: False Positive Rate (FPR)
--   Y-axis: True Positive Rate (TPR)
--   The closer AUROC is to 1, the better the model performance
-
-```{python}
-# ROC curve computation
-from sklearn.metrics import roc_curve, auc
-# Detailed ROC analysis code
-```
-
-### Spatial Cross-Validation
-
-Traditional cross-validation methods often ignore spatial autocorrelation. Spatial cross-validation addresses this by: - Clustering data based on spatial proximity - Ensuring spatial separation of training and test sets - Avoiding "spatial cheating"
-
-```{r}
-# Spatial cross-validation implementation
-library(sp)
-library(caret)
-# Specific spatial CV code
-```
-
-### Overfitting Considerations
-
-Overfitting is a common problem in machine learning: - Performs extremely well on training data - Poor performance on new data - Actually only "memorizes" noise in training data
-
-### Practical Recommendations
-
-1.  Choose appropriate analysis methods based on data characteristics
-2.  Carefully select the number of endmembers
-3.  Use multiple accuracy assessment indicators
-4.  Pay attention to spatial autocorrelation
-5.  Balance model complexity and generalization ability
+------------------------------------------------------------------------
 
 ## 7.2 Applications
 
 Remote sensing classification techniques have found broad applications in both public health and biodiversity conservation, enabling more effective monitoring of disease transmission and environmental changes, which are crucial for understanding human health risks and preserving biodiversity.
 
-### Public Health and Epidemiology
+### 7.2.1 Public Health and Epidemiology
 
 Remote sensing classification techniques have become an essential tool in spatial epidemiology, providing invaluable insights into disease transmission and environmental health. These techniques allow for the mapping of population distributions and movement patterns, which are critical for understanding how diseases spread, as demonstrated by Tatem et al. (2017). The potential of remote sensing was particularly evident during the COVID-19 pandemic, where satellite imagery was used to analyze urban environmental conditions, map population density, track transmission risk zones, and explore socio-environmental factors influencing disease spread.
 
-### Biodiversity Conservation
+### 7.2.2 Biodiversity Conservation
 
 Remote sensing has also played a key role in biodiversity conservation. By leveraging advanced classification methods, Hansen et al. (2013) mapped global forest cover changes, offering crucial data for understanding ecosystem dynamics and deforestation patterns. These techniques have been instrumental in monitoring forest cover and detecting subtle ecological transformations, as well as in assessing the impact of environmental changes on biodiversity.
 
 In addition, remote sensing has been widely applied in habitat and species distribution studies. Leimgruber et al. (2005) used these techniques to map critical habitats for endangered species, analyze landscape fragmentation, and monitor habitat quality. Moreover, these tools have proven valuable in tracking shifts in vegetation zones, identifying climate-induced ecosystem changes, and predicting potential species migration patterns, as highlighted by Horning et al. (2010).
 
-### References
+**References**:
 
 Tatem, A. J., et al. (2017). Mapping population and pathogen movements. Trends in Parasitology, 33(9), arus-735.
 
@@ -111,6 +54,14 @@ Leimgruber, P., et al. (2005). Fragmentation of Asia's remaining wildlands. Scie
 
 Horning, N., et al. (2010). Remote sensing for ecology and conservation. Oxford University Press.
 
+------------------------------------------------------------------------
+
 ## 7.3 Reflection
 
-My journey through remote sensing classification techniques has been transformative. Beyond technical skills, I've gained a profound appreciation for how advanced geospatial analysis can bridge complex scientific understanding with real-world problem-solving. These methods are not just computational techniques but powerful tools for understanding our changing planet. They represent an intersection of technology, environmental science, and social impact. The ability to extract meaningful insights from satellite imagery – tracking urban growth, monitoring environmental changes, or supporting disaster management – demonstrates the incredible potential of interdisciplinary research. For my future research, these techniques offer a lens to look beyond surface-level observations. They teach me the importance of rigorous methodology, the value of multi-source data integration, and the critical role of validation in scientific research. More importantly, they remind me that technological advances are most powerful when directed towards understanding and addressing global challenges.
+This week's content gave me a deeper understanding of remote sensing classification techniques. At first, I was amazed by how powerful these methods are, especially in helping us understand complex features of the Earth's surface. When processing remote sensing data, methods like pixel-based analysis and sub-pixel analysis provided me with many new insights. However, I also realized that these methods aren't one-size-fits-all. For example, traditional pixel classification seems simple but doesn't consider the spatial relationships between pixels, which is a crucial aspect of natural environments.
+
+Additionally, the introduction of sub-pixel analysis gave me a new perspective on how to describe land cover types more accurately. By decomposing the spectral characteristics within each pixel, sub-pixel analysis helps us extract more detailed information from complex surfaces. This method made me realize that remote sensing isn't just about "processing" images, but about digging deeper into the information behind them.
+
+While learning these techniques, I also began reflecting on how to apply them more effectively. For instance, avoiding overfitting is something I need to be cautious about. Many times, when applying these methods, it's easy to be distracted by noise in the data, leading to a model that performs well on training data but doesn't generalize effectively to new data. This issue made me realize that behind an accurate model isn't just complex algorithms, but also a deep understanding of the data itself. So, in my future work, I will focus more on the validation process to ensure my analysis is meaningful.
+
+Overall, these classification techniques not only enhanced my understanding of remote sensing data but also made me think about how to balance the complexity of the technology with the reliability of the data in real-world applications. As I become more familiar with these methods, I'll pay more attention to how to choose and use them wisely to solve practical problems.

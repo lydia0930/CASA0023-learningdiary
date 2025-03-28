@@ -34,9 +34,11 @@ Map.addLayer(ndvi, {min: 0, max: 1, palette: ['blue', 'white', 'green']}, 'NDVI'
 
 ![](https://upload.wikimedia.org/wikipedia/commons/a/ae/NDVI.jpg){fig-alt="NDVI Example" width="80%"}
 
-Generated Normalized Difference Vegetation Index (NDVI) from the satellite images(source: wikipedia)
+Generated Normalized Difference Vegetation Index (NDVI) from the satellite images [Source: wikipedia](https://upload.wikimedia.org/wikipedia/commons/a/ae/NDVI.jpg)
 
 This lecture reinforced the importance of cloud computing in geospatial analysis, making it possible to handle large datasets efficiently.
+
+------------------------------------------------------------------------
 
 ## 5.2 Applications
 
@@ -48,31 +50,24 @@ In the policy domain, GEE is instrumental in monitoring deforestation and urban 
 
 ![](https://www.mdpi.com/remotesensing/remotesensing-12-01655/article_deploy/html/images/remotesensing-12-01655-g007-550.jpg){fig-alt="Urban Heat Island Analysis Using GEE" width="80%"}
 
-（source：MDPI Remote Sensing）
+[Source:MDPI Remote Sensing](https://www.mdpi.com/remotesensing/remotesensing-12-01655/article_deploy/html/images/remotesensing-12-01655-g007-550.jpg)
 
-------------------------------------------------------------------------
-
-## 5.3 Reflection
-
-This session provided a solid foundation in Google Earth Engine and its applications. One of the key takeaways was learning how cloud-based geospatial processing simplifies working with large remote sensing datasets. Unlike traditional GIS software, GEE enables real-time data processing without requiring extensive local computing power.
-
-Key skills I gained include:
-
--   Filtering and visualizing Landsat data for specific study areas.
--   Computing NDVI to analyze vegetation health and land cover changes.
--   Using image mosaicking and clipping to refine geospatial analysis.
--   Exporting processed images for further study.
-
-In future studies, I aim to integrate GEE with Python to streamline spatial analysis and develop automated workflows. Furthermore, I intend to leverage GEE’s time-series analysis capabilities to investigate urban mobility patterns, urban heat islands, and socio-economic disparities in cities.
-
-Overall, this session demonstrated GEE’s powerful capabilities in handling large-scale spatial data, making it an essential tool for my future research in urban analytics and transport planning.
-
-------------------------------------------------------------------------
-
-## References
+**References**:
 
 Gorelick, N., Hancher, M., Dixon, M., Ilyushchenko, S., Thau, D., & Moore, R. (2017). Google Earth Engine: Planetary-scale geospatial analysis for everyone. Remote Sensing of Environment, 202, 18-27.
 
 Gong, P., Li, X., & Zhang, W. (2019). 40-Year global land cover change dataset based on Landsat imagery. Science Bulletin, 64(11), 756-763.
 
 Hansen, M. C., Potapov, P. V., Moore, R., Hancher, M., Turubanova, S. A., Tyukavina, A., et al. (2013). High-resolution global maps of 21st-century forest cover change. Science, 342(6160), 850-853.
+
+------------------------------------------------------------------------
+
+## 5.3 Reflection
+
+This week was my first introduction to Google Earth Engine (GEE), and it’s been an exciting start to exploring how cloud-based platforms can transform remote sensing analysis. GEE’s ability to process large-scale satellite imagery efficiently is impressive, and it’s truly fascinating that it allows for analysis at a global scale while also enabling a zoomed-in focus on specific countries or regions. As a beginner, I found it easy to filter and visualize Landsat data, and the speed of processing was a big advantage compared to traditional methods. The hands-on approach of working directly with satellite imagery, like computing NDVI to analyze vegetation health, was a valuable learning experience.
+
+However, as much as I’m amazed by GEE’s power, this week also made me reflect critically on the limitations of remote sensing. For instance, the example involving famine highlighted an important lesson: while satellite data can provide valuable insights, it can’t tell the whole story. Remote sensing is often most effective when combined with other contextual data, such as socioeconomic or local environmental information. This reinforces the point that while tools like GEE are powerful, they need to be used thoughtfully and in combination with other data sources to ensure that conclusions are meaningful and useful for decision-making.
+
+I also realized that, although GEE streamlines complex processes like mosaicking and clipping, working with satellite imagery still requires careful attention to detail. There are steps, such as atmospheric corrections, that need to be carefully considered to ensure data accuracy. This session has reinforced the idea that tools like GEE are incredibly useful, but they also require critical thinking and domain knowledge to interpret the results properly.
+
+In the future, I look forward to diving deeper into GEE and learning how to leverage its capabilities for more complex urban and environmental studies. The experience has opened my eyes to the potential of cloud-based geospatial tools, and I’m excited to apply them in my research.

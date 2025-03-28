@@ -13,7 +13,9 @@ book:
     - Wk3_Corrections.qmd
     - Wk4_Policy.qmd
     - Wk6_GEE.qmd
-    - references.qmd
+    - Wk7.qmd
+    - Wk8.qmd
+    - Wk9.qmd
 
 bibliography: references.bib
 

@@ -1,25 +1,184 @@
 ---
 title: "Wk4_Policy"
 format: html
+editor: 
+  markdown: 
+    wrap: 72
 ---
 
-## Quarto
+# 4 Policy
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+Week 4 focused on the applications of remote sensing to policy, and I
+made a case study in Singapore.
 
-## Running Code
+## 4.1 Summary
 
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+### 4.1.1 City Summary
 
-```{r}
-1 + 1
-```
+Singapore is a highly urbanized city-state located at the southern tip
+of the Malay Peninsula in Southeast Asia. With a land area of just 728
+km² and a population of 5.9 million, Singapore is one of the world's
+most densely populated countries. The nation faces unique challenges due
+to its limited land resources, including food security concerns as it
+imports over 90% of its food supply, vulnerability to climate change
+effects like sea-level rise, and urban heat island intensification due
+to its dense urban development.
 
-You can add options to executable code like this
+### 4.1.2 Policy Summary
 
-```{r}
-#| echo: false
-2 * 2
-```
+1.  **Global Policy Overview**:
 
-The `echo: false` option disables the printing of code (only output is displayed).
+    Sustainable Development Goals (SDGs) Singapore has committed to
+    implementing the United Nations' Sustainable Development Goals
+    (SDGs), with particular emphasis on SDG 11 (Sustainable Cities and
+    Communities) and SDG 13 (Climate Action). As a highly urbanized
+    nation with limited natural resources, Singapore has prioritized
+    creating a sustainable, resilient urban environment.
+
+2.  **Singapore Green Plan 2030** (Singapore Ministry of Sustainability
+    and the Environment, 2021)
+
+    The Singapore Green Plan 2030, launched by the government in 2021,
+    serves as a national roadmap toward sustainable development and
+    net-zero emissions. The plan integrates remote sensing technology to
+    monitor environmental changes, track policy implementation, and
+    evaluate effectiveness across various domains. Singapore's Urban
+    Redevelopment Authority (URA) and National Environment Agency (NEA)
+    have partnered with research institutions to employ Earth
+    observation data for urban planning, environmental monitoring, and
+    climate adaptation. This partnership leverages remote sensing to map
+    urban heat islands, monitor green space development, and assess
+    coastal changes to inform policy decisions and future planning.
+
+    | Goal                         | Target                                                                |
+    |-------------------------------|-----------------------------------------|
+    | Increasing urban green cover | From **47% to 50%** by 2030                                           |
+    | Green spaces and trees       | **1,000 hectares** of green spaces, **one million additional trees**  |
+    | Local food production        | **20%** of Singapore's total food demand by 2030                      |
+    | Waste reduction              | **30%** reduction in waste sent to landfill by 2030                   |
+    | Solar energy expansion       | **8,000 hectares** of solar panels on rooftops and reservoirs by 2030 |
+    | Climate resilience           | Strategies against **sea-level rise and extreme weather events**      |
+    | Water resource management    | Sustainable management through **catchment management**               |
+
+![](https://i0.wp.com/www.newdelhitimes.com/wp-content/uploads/2020/01/image_2022_12_09T06_02_31_273Z.png?w=500&quality=80&ssl=1){width="70%"}
+
+[Source:Singapore greenplan](https://www.greenplan.gov.sg/)
+
+------------------------------------------------------------------------
+
+## 4.2 Application
+
+This section identifies how remotely sensed data could be used to
+contribute to Singapore's policy goals, answering the question: **'How
+could the data be applied to solve the policy challenge?'**
+
+### 4.2.1 Data Sources
+
+Singapore employs multiple remote sensing platforms to support its Green
+Plan implementation:
+
+-   **Satellite Imagery:**
+    -   **Sentinel-2**: Provides 10m resolution multispectral data to
+        monitor urban vegetation changes.
+    -   **Landsat data**: Offers a historical perspective for long-term
+        change analysis.
+    -   **Thermal Mapping**:
+        -   Landsat 8/9 thermal bands and ECOSTRESS data identify urban
+            heat islands.
+        -   Temperature readings are accurate to within 1°C.
+-   **Unmanned Aerial Vehicles (UAVs):**
+    -   Provides ultra-high resolution (sub-meter) imagery.
+    -   Used for monitoring specific urban projects, tree health in
+        parks, and rooftop gardens.
+-   **Aerial LiDAR Surveys:**
+    -   Creates detailed 3D models of the urban environment.
+    -   Essential for vegetation structure analysis and building-level
+        energy studies.
+
+### 4.2.2 Techniques
+
+-   **Urban Heat Island Monitoring**
+
+1.  Acquire thermal infrared imagery from satellites and aerial
+    platforms.
+2.  Calibrate and correct imagery for atmospheric effects.
+3.  Generate surface temperature maps across the urban area.
+4.  Identify heat island hotspots and correlate with urban features.
+5.  Track temperature changes in relation to green infrastructure
+    implementation.
+6.  Develop targeted cooling strategies for hotspot areas.
+
+-   **Green Space Assessment**
+
+1.  Acquire high-resolution multispectral imagery.
+2.  Calculate vegetation indices (**NDVI, EVI**) to quantify greenery.
+3.  Classify urban vegetation types (**tree canopy, shrubs, grass**).
+4.  Monitor changes in green cover over time.
+5.  Evaluate effectiveness of tree-planting initiatives.
+6.  Identify priority areas for new green space development.
+
+-   **Coastal Change Monitoring**
+
+1.  Acquire satellite and aerial imagery of coastal areas.
+2.  Use **SAR imagery** for high-precision elevation measurements.
+3.  Detect changes in shoreline position and elevation.
+4.  Monitor effectiveness of coastal protection measures.
+5.  Model areas vulnerable to sea-level rise.
+6.  Develop adaptive strategies for coastal infrastructure.
+
+-   **Urban Agriculture Mapping**
+
+1.  Identify existing and potential rooftop farming locations.
+2.  Monitor productivity of urban farms with multispectral imagery.
+3.  Calculate potential food production capacity across the city.
+4.  Track progress toward **30% local food production goal**.
+5.  Optimize urban farming techniques based on remote sensing data.
+
+**References**:
+
+Singapore Ministry of Sustainability and the Environment (2021).
+"Singapore Green Plan 2030" (Official government website)
+https://www.greenplan.gov.sg/
+
+------------------------------------------------------------------------
+
+## 4.3 Reflection
+
+Singapore's application of remote sensing technologies to support its
+Green Plan 2030 demonstrates how a land-constrained city-state can
+leverage Earth observation data to inform sustainable development
+policies. The integration of satellite, aerial, and UAV platforms
+provides multi-scale monitoring capabilities that match the precision
+requirements of Singapore's urban planning and environmental management
+needs.
+
+What I find most interesting about Singapore's approach is how necessity
+has driven innovation. With extremely limited land resources and high
+vulnerability to climate change, Singapore cannot afford planning
+mistakes or ineffective environmental policies. Remote sensing provides
+the evidence base needed to optimize every square meter of the urban
+landscape for multiple benefits – from cooling effects to food
+production to biodiversity support.
+
+Singapore's coastal monitoring is particularly critical given that
+approximately 30% of the island lies less than 5 meters above sea level.
+The combination of satellite-based monitoring and detailed elevation
+modeling enables planners to prioritize adaptation measures where
+they're most needed, potentially saving billions in infrastructure costs
+through targeted interventions.
+
+The city-state's approach to urban heat island mitigation could serve as
+a model for other tropical cities. By systematically mapping surface
+temperatures against urban morphology and vegetation cover, Singapore
+has developed precise guidelines for how much and what type of urban
+greenery is needed to achieve specific cooling targets. This data-driven
+approach to climate adaptation could be valuable across Southeast Asia,
+where many megacities face similar heat challenges. An output of
+Singapore's urban greening policy can be seen in Figure, showing the
+integration of vegetation into high-density urban areas through
+innovative vertical gardens.
+
+![](https://www.crabintheair.com/wp-content/uploads/2017/02/parkroyal-on-pickering-review-e1537299078683.jpg){width="80%"}
+
+Vertical gardens on residential buildings in Singapore
+[Source](https://www.crabintheair.com/wp-content/uploads/2017/02/parkroyal-on-pickering-review-e1537299078683.jpg)
