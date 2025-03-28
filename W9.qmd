@@ -4,23 +4,54 @@ format: html
 editor: visual
 ---
 
-## Quarto
+# 8 Synthetic Aperture Radar (SAR)
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+Synthetic Aperture Radar (SAR) is an active remote sensing technology that transmits microwave signals and records the backscatter amplitude and phase data. Unlike optical sensors such as Landsat, SAR can penetrate clouds and operate effectively in all weather conditions, making it highly valuable for earth observation.
 
-## Running Code
+## 8.1 Summary
 
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+-   **Amplitude (Backscatter):** Measures the strength of the returned signal, influenced by surface roughness and material properties. 
+-   **Phase:** Captures the relative location of wave cycles, used in interferometry applications. 
 
-```{r}
-1 + 1
-```
+Several factors impact SAR interpretation: 
 
-You can add options to executable code like this
+-   **Polarization:** Determines how waves interact with surfaces. For example, VV polarization relates to surface roughness, while VH polarization captures volumetric structures like vegetation.
+-   **Permittivity (Dielectric Constant):** Defines how reflective a material is. Water, for instance, disperses signals, resulting in low backscatter. 
+-   **Wavelength (Band):** Affects penetration depth, with longer wavelengths being more effective for detecting subsurface structures. 
 
-```{r}
-#| echo: false
-2 * 2
-```
+In Google Earth Engine (GEE), only amplitude data is available, while phase data is not. SAR data is generally represented in three scales: 
 
-The `echo: false` option disables the printing of code (only output is displayed).
+1.  **Power scale (RAW SAR):** Suitable for statistical analysis. 
+2.  **Amplitude scale:** Best for visualization. 
+3.  **dB scale (Decibels):** Enhances contrast and is the default format in GEE. 
+
+## 8.2 Applications
+
+SAR’s ability to operate under all weather conditions makes it highly valuable for detecting environmental and structural changes over time. Several key methods exist: 
+
+-   **Image Differencing (Ratio or Log Ratios):** Traditional techniques that compare two images to highlight changes. These methods, however, may fail to fully utilize SAR’s high temporal resolution. 
+-   **Time-Series Analysis:** Captures gradual trends rather than abrupt differences. Common techniques include: 
+    -   **T-tests:** Identifies statistically significant changes. 
+    -   **Standard Deviation:** Highlights areas with higher variability over time. 
+-   **Data Fusion:** Enhancing interpretation by integrating SAR with optical data. Notable fusion techniques include: 
+    -   **Principal Component Analysis (PCA):** Reduces dimensionality while preserving key variations. 
+    -   **Object-Based Image Analysis (OBIA):** Segments images into meaningful regions rather than individual pixels. 
+    -   **Intensity Fusion:** Merges SAR and optical data for improved classification. 
+
+SAR’s adaptability makes it useful for applications in **urban monitoring**, **deforestation tracking**, and **disaster response**. However, choosing the best method depends on the research objective and data constraints. 
+
+## 8.3 Critical Reflection
+
+While SAR offers unique advantages, it also presents challenges. One key issue is the lack of a standardized approach for change detection. Multiple methods exist, but selecting the most effective one remains subjective. How do we determine which technique is optimal for a given scenario?
+
+Another challenge is the reliance on two-image comparisons despite SAR’s rich temporal dataset. \*\*Time-series analysis could provide more robust insights by detecting long-term trends rather than focusing solely on abrupt changes.
+
+Data fusion with optical imagery is particularly promising. SAR’s cloud-penetrating ability combined with optical data’s spectral richness could significantly enhance classification accuracy. However, merging these two fundamentally different data sources remains a technical challenge, requiring further exploration. 
+
+Additionally, I wonder about the role of machine learning in SAR analysis. While the course focused on traditional statistical methods, deep learning could potentially automate feature extraction and change detection more efficiently. With the increasing availability of SAR datasets (e.g., Sentinel-1), this could be a promising research direction. 
+
+Moving forward, I plan to:
+
+-   **Experiment with time-series methods** for better change detection.
+-   **Explore SAR-optical fusion techniques** to improve classification.
+-   **Investigate machine learning applications** for SAR analysis.

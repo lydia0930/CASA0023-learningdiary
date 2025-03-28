@@ -3,23 +3,76 @@ title: "Wk6_GEE"
 format: html
 ---
 
-## Quarto
+# 5 Google Earth Engine
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+The week mainly focuses on utilizing Google Earth Engine (GEE) for remote sensing data processing, covering key functions such as image filtering, NDVI computation, mosaicking, and spatial analysis for urban and environmental applications.
 
-## Running Code
+## 5.1 Summary
 
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+In this week's lecture, we explored Google Earth Engine (GEE) and its application in processing remote sensing data. GEE is a cloud-based geospatial analysis platform that allows large-scale processing of satellite imagery.
 
-```{r}
-1 + 1
+Key topics covered in the session included:
+
+-   Loading and filtering satellite imagery using Landsat 9 surface reflectance data.
+-   Computing indices such as NDVI (Normalized Difference Vegetation Index) to assess vegetation health.
+-   Mosaicking and clipping images to refine analysis within specific study areas.
+-   Exporting processed images to Google Drive for further analysis.
+
+Below is an example of computing NDVI in GEE:
+
+``` javascript
+// Load Landsat 9 imagery and filter by date
+var dataset = ee.ImageCollection('LANDSAT/LC09/C02/T1_L2')
+    .filterDate('2022-01-01', '2022-02-01');
+
+// Compute NDVI using NIR (Band 5) and Red (Band 4)
+var ndvi = dataset.first().normalizedDifference(['SR_B5', 'SR_B4']).rename('NDVI');
+
+// Display NDVI layer with color visualization
+Map.addLayer(ndvi, {min: 0, max: 1, palette: ['blue', 'white', 'green']}, 'NDVI');
 ```
 
-You can add options to executable code like this
+![](https://upload.wikimedia.org/wikipedia/commons/a/ae/NDVI.jpg){fig-alt="NDVI Example" width="80%"}
 
-```{r}
-#| echo: false
-2 * 2
-```
+Generated Normalized Difference Vegetation Index (NDVI) from the satellite images(source: wikipedia)
 
-The `echo: false` option disables the printing of code (only output is displayed).
+This lecture reinforced the importance of cloud computing in geospatial analysis, making it possible to handle large datasets efficiently.
+
+## 5.2 Applications
+
+GEE plays a crucial role in urban studies, environmental monitoring, and policy analysis, offering scalable solutions for spatial data processing. It is widely used in land-use classification, climate change research, and urban heat island analysis.
+
+For example, research by Gorelick et al. (2017) highlights GEE’s capability in multi-temporal analysis of land cover changes, enabling researchers to assess urban expansion over time. Similarly, Gong et al. (2019) utilized GEE for global land cover mapping, demonstrating its effectiveness in large-scale remote sensing applications.
+
+In the policy domain, GEE is instrumental in monitoring deforestation and urban sprawl, assisting government agencies in spatial planning and disaster management (Hansen et al., 2013). By integrating socio-economic datasets, GEE can also help in analyzing transport accessibility and social inequalities, making it a valuable tool in urban planning and mobility studies.
+
+![](https://www.mdpi.com/remotesensing/remotesensing-12-01655/article_deploy/html/images/remotesensing-12-01655-g007-550.jpg){fig-alt="Urban Heat Island Analysis Using GEE" width="80%"}
+
+（source：MDPI Remote Sensing）
+
+------------------------------------------------------------------------
+
+## 5.3 Reflection
+
+This session provided a solid foundation in Google Earth Engine and its applications. One of the key takeaways was learning how cloud-based geospatial processing simplifies working with large remote sensing datasets. Unlike traditional GIS software, GEE enables real-time data processing without requiring extensive local computing power.
+
+Key skills I gained include:
+
+-   Filtering and visualizing Landsat data for specific study areas.
+-   Computing NDVI to analyze vegetation health and land cover changes.
+-   Using image mosaicking and clipping to refine geospatial analysis.
+-   Exporting processed images for further study.
+
+In future studies, I aim to integrate GEE with Python to streamline spatial analysis and develop automated workflows. Furthermore, I intend to leverage GEE’s time-series analysis capabilities to investigate urban mobility patterns, urban heat islands, and socio-economic disparities in cities.
+
+Overall, this session demonstrated GEE’s powerful capabilities in handling large-scale spatial data, making it an essential tool for my future research in urban analytics and transport planning.
+
+------------------------------------------------------------------------
+
+## References
+
+Gorelick, N., Hancher, M., Dixon, M., Ilyushchenko, S., Thau, D., & Moore, R. (2017). Google Earth Engine: Planetary-scale geospatial analysis for everyone. Remote Sensing of Environment, 202, 18-27.
+
+Gong, P., Li, X., & Zhang, W. (2019). 40-Year global land cover change dataset based on Landsat imagery. Science Bulletin, 64(11), 756-763.
+
+Hansen, M. C., Potapov, P. V., Moore, R., Hancher, M., Turubanova, S. A., Tyukavina, A., et al. (2013). High-resolution global maps of 21st-century forest cover change. Science, 342(6160), 850-853.

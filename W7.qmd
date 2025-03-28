@@ -4,23 +4,71 @@ format: html
 editor: visual
 ---
 
-## Quarto
+# 6 Classification I
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+The sixth lecture of CASA0023 covers **remote sensing classification** techniques, which are crucial for interpreting satellite and aerial imagery. These methods are used to classify land cover and land use, and they are key in urban planning, environmental monitoring, and disaster management.
 
-## Running Code
+## Summary
 
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+Classification assigns pixels in remote sensing images to predefined categories. The primary classification methods are:
 
-```{r}
-1 + 1
-```
+-   **Supervised Classification**: This method requires labeled training samples to train the classifier. Common algorithms include Maximum Likelihood, Support Vector Machines (SVM), and Random Forest.
+-   **Unsupervised Classification**: This technique does not require labeled samples. Instead, it clusters the pixels based on their spectral properties. Popular algorithms include K-Means and ISODATA.
 
-You can add options to executable code like this
+![](https://miro.medium.com/v2/resize:fit:4800/format:webp/0*Uzqy-gqZg77Wun0e.jpg)
 
-```{r}
-#| echo: false
-2 * 2
-```
+Supervised vs Unsupervised Classification ( source: https://medium.com/@recrosoft.io/supervised-vs-unsupervised-learning-key-differences-cdd46206cdcb)
 
-The `echo: false` option disables the printing of code (only output is displayed).
+### Supervised Classification
+
+Supervised classification involves four main steps:
+
+1.  **Training Sample Collection**: Representative areas of different land cover types are selected to create labeled training data.
+
+2.  **Training the Classifier**: The classifier is trained using these samples.
+
+3.  **Classifying**: The trained classifier is applied to the entire image to assign each pixel a category.
+
+4.  **Accuracy Assessment**: The classification result is evaluated using metrics like confusion matrices to assess its accuracy.
+
+### Unsupervised Classification
+
+Unsupervised classification uses the algorithm to group data based on pixel similarity, without predefined labels. The steps are:
+
+1.  **Defining the Number of Clusters**: A predefined number of clusters is set.
+
+2.  **Clustering**: The algorithm groups the pixels based on their spectral similarity.
+
+3.  **Cluster Labeling**: The resulting clusters are labeled based on additional knowledge or analysis.
+
+### Applications
+
+Remote sensing classification techniques, particularly supervised and unsupervised methods, have numerous applications in various research fields, urban planning, and policy-making. These methods are extensively used for land use and land cover (LULC) mapping, providing essential insights into urban growth, environmental changes, and resource management.
+
+For instance, in urban growth monitoring, remote sensing classification plays a crucial role in mapping the expansion of cities. A study by Seto et al. (2011) applied supervised classification to assess the rate of urban sprawl in Chinese cities, quantifying the spatial extent of urban growth and the changes in land use patterns over several decades. This approach allowed for a better understanding of the environmental implications of urban expansion and helped policymakers address the challenges posed by rapid urbanization.
+
+In the context of disaster management, remote sensing classification techniques are invaluable for assessing damage after natural disasters. Following Hurricane Katrina, Reif et al. (2011) used remote sensing data to classify areas as damaged or undamaged, providing critical information for recovery efforts. By applying supervised classification methods, they were able to differentiate between flooded and non-flooded regions, allowing for more targeted and efficient disaster relief operations.
+
+Remote sensing classification is also widely used in agriculture, particularly for monitoring crop health and land productivity. Misbah et al. (2022) employed satellite imagery and classification techniques to analyze crop types and forecast yields in African agricultural land. By tracking crop conditions over time, remote sensing contributes to sustainable agricultural practices and informs food security policies, supporting better decision-making for the future of farming.
+
+These applications highlight the versatility and impact of remote sensing classification techniques across various sectors, providing valuable insights for urban planning, environmental management, disaster response, and agricultural optimization. Furthermore, in the realm of policy development, remote sensing classification supports land-use regulations and environmental laws. Governments use these techniques to monitor urban growth, ensure compliance with zoning policies, and design green urban spaces. Additionally, it informs sustainable agricultural policies by analyzing crop types and land productivity.
+
+In conclusion, remote sensing classification techniques are essential tools for understanding environmental dynamics, urbanization trends, and disaster recovery. Their applications span land management, climate change monitoring, and urban policy-making, demonstrating their importance in addressing the complex challenges of the modern world.
+
+**References**:
+
+Seto, K. C., Güneralp, B., & Hutyra, L. R. (2011). Global forecasts of urban expansion to 2030 and direct impacts on biodiversity and carbon pools. Proceedings of the National Academy of Sciences, 109(40), 16083-16088.
+
+Reif, M. K., et al. (2011). Post-Katrina Land-Cover, Elevation, and Volume Change Assessment along the South Shore of Lake Pontchartrain, Louisiana, U.S.A. Journal of Coastal Research, 30(10062), 30–39.
+
+Misbah, K., et al. (2022). Multi-sensors remote sensing applications for assessing, monitoring, and mapping NPK content in soil and crops in African agricultural land. Remote Sensing (Basel, Switzerland), 14(1), 81-.
+
+### Reflection
+
+This week’s lecture on remote sensing classification techniques was insightful and helped me understand the power of geospatial data in urban and environmental research. I learned about the two primary methods—supervised and unsupervised classification—along with their strengths and applications in real-world scenarios. The practical examples of using these techniques for land cover mapping, disaster assessment, and environmental monitoring were particularly valuable.
+
+What I found most useful was understanding the difference between supervised and unsupervised classification methods. While supervised classification relies on labeled training samples, unsupervised classification groups data based on natural patterns. This distinction will be useful in my future research, especially when dealing with large datasets and varying levels of prior knowledge. The ability to assess classification accuracy using methods like confusion matrices is also something I will definitely apply in future projects to validate results.
+
+Personally, I found the concept of applying remote sensing to disaster management particularly engaging. The ability to use satellite imagery to assess damage after a disaster or monitor environmental changes over time has significant implications for policy-making and urban resilience. This is an area I’m interested in, as it combines both urban planning and environmental concerns, areas I’m passionate about.
+
+Looking ahead, I plan to apply these classification techniques in my research on urban mobility and transportation inequality. For example, I could use remote sensing data to analyze urban sprawl and its effects on transportation systems or explore how environmental changes impact mobility patterns. As I continue my studies, I’ll focus on gaining proficiency in software tools like QGIS and Python to implement these techniques effectively.

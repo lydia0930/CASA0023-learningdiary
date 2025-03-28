@@ -2,24 +2,65 @@
 title: "Wk3_Corrections"
 format: html
 ---
+# 3 Classification I
 
-## Quarto
+## 3.1 Summary
+In this lecture, I learned about the fundamentals of remote sensing, focusing on data acquisition, sensor technologies, and their applications in urban and environmental studies. Here are the main points I gathered:
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+1. History & Key Innovations
+The discussion began with the evolution of Landsat satellites, where Virginia Norwood played a crucial role. She designed the Multispectral Scanner (MSS), which replaced NASA’s original Return Beam Vidicon (RBV) system. Unlike RBV’s analog TV-like imaging, MSS captured digital data across multiple spectra (visible + near-infrared), setting a standard for modern remote sensing.
 
-## Running Code
+2. Sensor Types & Mechanisms
+Whisk broom (cross-track) scanners (e.g., Landsat MSS/TM) use a rotating mirror to reflect light onto a single detector. They cover large areas but have moving parts that can wear out.
 
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+Push broom (along-track) scanners (e.g., SPOT, Sentinel-2) use detector arrays for faster, more efficient imaging but require precise calibration.
+I found it interesting how MSS’s digital approach outperformed RBV’s limited analog output, enabling long-term data continuity.
 
-```{r}
-1 + 1
-```
+3. Landsat’s Role & Applications
+Landsat’s 50+ year timeline (1972–present) shows its impact on monitoring urban growth, wildfires, and temperature changes. Projects like Dynamic World combine Landsat and Sentinel data for near-real-time land cover mapping—useful for tracking deforestation or urbanization.
 
-You can add options to executable code like this
+4. Data Processing Essentials
+Raw satellite imagery requires corrections before analysis:
 
-```{r}
-#| echo: false
-2 * 2
-```
+Geometric correction: Fixes distortions from sensor motion or Earth’s curvature.
 
-The `echo: false` option disables the printing of code (only output is displayed).
+Atmospheric correction: Reduces haze/scattering effects (e.g., using dark object subtraction).
+
+Terrain correction: Adjusts for elevation (e.g., orthorectification).
+
+5. Case Studies & Visualizations
+The comparison of Half Dome images (1972 MSS vs. 2022 high-res) demonstrated resolution improvements. NASA videos also illustrated how sensors capture data beyond human vision (e.g., infrared for vegetation health).
+
+
+## 3.2 Applications
+
+### Urban Growth & Land Use Mapping
+One of the most powerful applications of remote sensing is its ability to monitor urban growth and land use changes over time. Satellites like Landsat and Sentinel-2 have been invaluable in tracking the transformation of landscapes, especially as urban areas expand. The integration of Landsat with other datasets, like Sentinel-2 through the Dynamic World project, enables near-real-time land cover mapping, which is crucial for monitoring urbanization, deforestation, and the spread of infrastructure. For example, through the combination of these datasets, researchers can track the extent of urban sprawl, assess changes in built-up areas, and even identify shifts in the types of land cover (e.g., from agriculture to residential). This kind of information is vital for city planners and policymakers in managing sustainable urban growth and mitigating the environmental impact of development. Additionally, urban heat islands, a key environmental concern in cities, can be monitored using thermal infrared data, which helps identify regions that are overheating due to dense urbanization and limited vegetation.
+
+### Environmental Monitoring & Disaster Response
+Remote sensing also plays a critical role in environmental monitoring, particularly in disaster response and management. Landsat and Sentinel-2 satellites have been used extensively to monitor wildfires, floods, and changes in ecosystems. For example, Landsat’s long-term data series allows for the analysis of wildfire spread and recovery over decades. These data sets provide valuable insights into the impact of fire on vegetation and soil, and how these ecosystems recover over time. Similarly, Sentinel-2's high temporal resolution makes it an excellent tool for monitoring environmental changes more frequently, such as detecting the early stages of flooding or tracking the aftermath of extreme weather events. Remote sensing also supports vegetation health monitoring by detecting anomalies in plant reflectance, particularly using the near-infrared spectrum, which is sensitive to plant stress. This capability is essential for agriculture, forestry, and conservation efforts, enabling early intervention when vegetation shows signs of degradation, drought, or pest infestations.
+
+These applications underscore the versatility of remote sensing in tackling both urban planning challenges and environmental protection efforts, making it an indispensable tool for sustainable development and disaster preparedness.
+
+
+
+
+
+
+## 3.3 Reflection
+
+This week's practical exercise on atmospheric correction gave me valuable hands-on experience that made me think deeply about the challenges of working with real-world remote sensing data. Through applying both the Dark Object Subtraction (DOS) method and exploring more advanced options like the 6S model, I gained a new appreciation for the careful balance researchers must strike between accuracy and practicality.
+
+The most eye-opening moment came when I compared my corrected NDVI values with field measurements. While the DOS method clearly improved my results compared to using raw data, I noticed significant variations in urban areas where finding true "dark" pixels proved difficult. This highlighted a key limitation I hadn't fully considered before - that preprocessing methods relying on certain assumptions may work well in some environments but fail in others.
+
+What surprised me most was realizing how much these technical decisions can influence final research outcomes. A seemingly small choice in correction method could potentially affect conclusions about vegetation health or urban heat patterns. This makes me wonder how many published studies might be impacted by similar preprocessing limitations that aren't always clearly explained in methods sections.
+
+The exercise also made me reflect on resource constraints in real research situations. While I learned about theoretically superior methods like 6S, I now understand why many researchers opt for simpler approaches - the time, data requirements, and computational costs can be prohibitive, especially for students or small research teams.
+
+Moving forward, I plan to approach preprocessing with more careful consideration. I want to:
+
+Always document my correction choices and limitations transparently
+
+Test multiple methods when possible to understand their impacts
+
+Pay closer attention to how preprocessing might affect my specific study area

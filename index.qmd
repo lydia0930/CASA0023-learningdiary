@@ -9,16 +9,15 @@ format: html
 
 This is my learning diary for CASA0023. It contains weekly reflections and notes on various topics.
 
-- **Week 1:** Introduction to remote sensing  
-- **Week 2:** Presentation on sensors  
-- **Week 3:** Corrections and feedback  
-- **Week 4:** Policy discussion  
-- **Week 6:** Google Earth Engine analysis  
+-   **Week 1:** Introduction to remote sensing\
+-   **Week 2:** Presentation on sensors\
+-   **Week 3:** Corrections and feedback\
+-   **Week 4:** Policy discussion\
+-   **Week 6:** Google Earth Engine analysis
 
 **References and additional materials** are included at the end.
 
----
-
+------------------------------------------------------------------------
 
 ## Quarto
 
