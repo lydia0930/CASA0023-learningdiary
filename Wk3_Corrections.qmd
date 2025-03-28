@@ -1,11 +1,6 @@
 ---
 title: "Wk3_Corrections"
-format: 
-  html: 
-    mermaid: true
-editor: 
-  markdown: 
-    wrap: 72
+output: html_document  
 ---
 
 # 3 Classification I
@@ -25,7 +20,7 @@ different types of sensors employ different imaging mechanisms. The
 following table compares two common types of sensors:
 
 | Sensor Type                       | Working Principle                                                                     | Pros & Cons                                       |
-|-----------------------------------|---------------------------------------------------------------------------------------|---------------------------------------------------|
+|-----------------|-----------------------------------|--------------------|
 | Whisk broom (cross-track scanner) | Uses a rotating mirror to reflect light onto a single detector, covering a large area | Wide coverage, but moving parts can wear out      |
 | Push broom (along-track scanner)  | Uses detector arrays for faster and more efficient imaging                            | High efficiency, but requires precise calibration |
 | MSS (Multispectral Scanner)       | Uses a digital approach to capture multispectral data (visible + near-infrared)       | Provides better data continuity and accuracy      |
@@ -65,7 +60,7 @@ satellite imagery, as there can be discrepancies in lighting and
 radiometric calibration between images.
 
 | Enhancement Method        | Description                                      | Challenges in Urban Applications                       |
-|---------------------------|--------------------------------------------------|--------------------------------------------------------|
+|-----------------|--------------------------|-----------------------------|
 | **Mosaicing**             | Combines multiple images into one seamless image | Standard methods may cause radiometric inconsistencies |
 | **Contrast Enhancement**  | Improves clarity by enhancing feature contrast   | May over-complicate images, hindering research         |
 | **Creating New Datasets** | Uses band composition/feature extraction         | High computational load and analysis complexity        |

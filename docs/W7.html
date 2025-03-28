@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CASA0023 Learning Diary - 4&nbsp; Wk3_Corrections</title>
+<title>CASA0023 Learning Diary - 7&nbsp; W7</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./Wk4_Policy.html" rel="next">
-<link href="./Wk2_Presentation.html" rel="prev">
+<link href="./W8.html" rel="next">
+<link href="./Wk6_GEE.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Wk3_Corrections.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Wk3_Corrections</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./W7.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">W7</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -126,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Wk3_Corrections.html" class="sidebar-item-text sidebar-link active">
+  <a href="./Wk3_Corrections.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Wk3_Corrections</span></span></a>
   </div>
 </li>
@@ -144,7 +144,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./W7.html" class="sidebar-item-text sidebar-link">
+  <a href="./W7.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">W7</span></span></a>
   </div>
 </li>
@@ -170,20 +170,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#classification-i" id="toc-classification-i" class="nav-link active" data-scroll-target="#classification-i"><span class="header-section-number">5</span> 3 Classification I</a>
+  <li><a href="#classification-i" id="toc-classification-i" class="nav-link active" data-scroll-target="#classification-i"><span class="header-section-number">8</span> 6 Classification I</a>
   <ul class="collapse">
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">5.1</span> 3.1 Summary</a>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">8.1</span> 6.1 Summary</a>
   <ul class="collapse">
-  <li><a href="#sensor-types-and-mechanisms" id="toc-sensor-types-and-mechanisms" class="nav-link" data-scroll-target="#sensor-types-and-mechanisms"><span class="header-section-number">5.1.1</span> 3.1.1 Sensor Types and Mechanisms</a></li>
-  <li><a href="#data-correction-process" id="toc-data-correction-process" class="nav-link" data-scroll-target="#data-correction-process"><span class="header-section-number">5.1.2</span> 3.1.2 Data Correction Process</a></li>
-  <li><a href="#data-mosaicing-and-enhancement" id="toc-data-mosaicing-and-enhancement" class="nav-link" data-scroll-target="#data-mosaicing-and-enhancement"><span class="header-section-number">5.1.3</span> 3.1.3 Data Mosaicing and Enhancement</a></li>
+  <li><a href="#supervised-classification" id="toc-supervised-classification" class="nav-link" data-scroll-target="#supervised-classification"><span class="header-section-number">8.1.1</span> 6.1.1 Supervised Classification</a></li>
+  <li><a href="#unsupervised-classification" id="toc-unsupervised-classification" class="nav-link" data-scroll-target="#unsupervised-classification"><span class="header-section-number">8.1.2</span> 6.1.2 Unsupervised Classification</a></li>
   </ul></li>
-  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">5.2</span> 3.2 Applications</a>
-  <ul class="collapse">
-  <li><a href="#urban-growth-land-use-mapping" id="toc-urban-growth-land-use-mapping" class="nav-link" data-scroll-target="#urban-growth-land-use-mapping"><span class="header-section-number">5.2.1</span> 3.2.1 Urban Growth &amp; Land Use Mapping</a></li>
-  <li><a href="#environmental-monitoring-disaster-response" id="toc-environmental-monitoring-disaster-response" class="nav-link" data-scroll-target="#environmental-monitoring-disaster-response"><span class="header-section-number">5.2.2</span> 3.2.2 Environmental Monitoring &amp; Disaster Response</a></li>
-  </ul></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">5.3</span> 3.3 Reflection</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">8.2</span> 6.2 Applications</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">8.3</span> 6.3 Reflection</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -193,7 +188,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Wk3_Corrections</span></h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">W7</span></h1>
 </div>
 
 
@@ -210,116 +205,58 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="classification-i" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> 3 Classification I</h1>
-<section id="summary" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">5.1</span> 3.1 Summary</h2>
-<p>In this lecture, I learned about the fundamentals of remote sensing, focusing on data acquisition, sensor technologies, data processing, and their applications in urban and environmental studies. The session was divided into two main parts: image correction and data mosaicing and enhancement. Below are the key takeaways:</p>
-<section id="sensor-types-and-mechanisms" class="level3" data-number="5.1.1">
-<h3 data-number="5.1.1" class="anchored" data-anchor-id="sensor-types-and-mechanisms"><span class="header-section-number">5.1.1</span> 3.1.1 Sensor Types and Mechanisms</h3>
-<p>Remote sensing sensors are at the core of remote sensing technology, and different types of sensors employ different imaging mechanisms. The following table compares two common types of sensors:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 23%">
-<col style="width: 48%">
-<col style="width: 27%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Sensor Type</th>
-<th>Working Principle</th>
-<th>Pros &amp; Cons</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Whisk broom (cross-track scanner)</td>
-<td>Uses a rotating mirror to reflect light onto a single detector, covering a large area</td>
-<td>Wide coverage, but moving parts can wear out</td>
-</tr>
-<tr class="even">
-<td>Push broom (along-track scanner)</td>
-<td>Uses detector arrays for faster and more efficient imaging</td>
-<td>High efficiency, but requires precise calibration</td>
-</tr>
-<tr class="odd">
-<td>MSS (Multispectral Scanner)</td>
-<td>Uses a digital approach to capture multispectral data (visible + near-infrared)</td>
-<td>Provides better data continuity and accuracy</td>
-</tr>
-</tbody>
-</table>
-<p>Through these different sensor technologies, remote sensing systems are able to capture various types of land feature data based on specific needs.</p>
-</section>
-<section id="data-correction-process" class="level3" data-number="5.1.2">
-<h3 data-number="5.1.2" class="anchored" data-anchor-id="data-correction-process"><span class="header-section-number">5.1.2</span> 3.1.2 Data Correction Process</h3>
-<p>Satellite imagery often requires correction before it can be used for analysis. The following diagram shows the typical correction process:</p>
+<section id="classification-i" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> 6 Classification I</h1>
+<p>The sixth lecture of CASA0023 covers remote sensing classification techniques, which are crucial for interpreting satellite and aerial imagery. These methods are used to classify land cover and land use, and they are key in urban planning, environmental monitoring, and disaster management.</p>
+<section id="summary" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">8.1</span> 6.1 Summary</h2>
+<p>Classification assigns pixels in remote sensing images to predefined categories. The primary classification methods are:</p>
 <ul>
-<li><p>Start with a Raw Satellite Image.</p></li>
-<li><p>Perform Geometric Correction to fix distortions caused by sensor motion or the Earth’s curvature.</p></li>
-<li><p>Apply Atmospheric Correction to remove haze or scattering effects, for example, using dark object subtraction.</p></li>
-<li><p>Proceed with Terrain Correction to adjust for elevation differences, such as through orthorectification.</p></li>
+<li><strong>Supervised Classification</strong>: This method requires labeled training samples to train the classifier. Common algorithms include Maximum Likelihood, Support Vector Machines (SVM), and Random Forest.</li>
+<li><strong>Unsupervised Classification</strong>: This technique does not require labeled samples. Instead, it clusters the pixels based on their spectral properties. Popular algorithms include K-Means and ISODATA.</li>
 </ul>
-<p>Data correction is a crucial first step to ensure the accuracy and usability of remote sensing imagery. By applying geometric correction, atmospheric correction, and terrain correction, we can eliminate external disturbances and improve the precision of the data.</p>
+<p><img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/0*Uzqy-gqZg77Wun0e.jpg" class="img-fluid"></p>
+<p>Supervised vs Unsupervised Classification <a href="https://medium.com/@recrosoft.io/supervised-vs-unsupervised-learning-key-differences-cdd46206cdcb">Source</a></p>
+<section id="supervised-classification" class="level3" data-number="8.1.1">
+<h3 data-number="8.1.1" class="anchored" data-anchor-id="supervised-classification"><span class="header-section-number">8.1.1</span> 6.1.1 Supervised Classification</h3>
+<p>Supervised classification involves four main steps:</p>
+<ul>
+<li><p><strong>Training Sample Collection</strong>: Representative areas of different land cover types are selected to create labeled training data.</p></li>
+<li><p><strong>Training the Classifier</strong>: The classifier is trained using these samples.</p></li>
+<li><p><strong>Classifying</strong>: The trained classifier is applied to the entire image to assign each pixel a category.</p></li>
+<li><p><strong>Accuracy Assessment</strong>: The classification result is evaluated using metrics like confusion matrices to assess its accuracy.</p></li>
+</ul>
 </section>
-<section id="data-mosaicing-and-enhancement" class="level3" data-number="5.1.3">
-<h3 data-number="5.1.3" class="anchored" data-anchor-id="data-mosaicing-and-enhancement"><span class="header-section-number">5.1.3</span> 3.1.3 Data Mosaicing and Enhancement</h3>
-<p>Mosaicing and enhancement techniques are vital for improving remote sensing imagery, especially for urban and environmental studies. However, these techniques must be chosen based on the specific needs of the study. Standard mosaicing methods may not always be suitable for satellite imagery, as there can be discrepancies in lighting and radiometric calibration between images.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 23%">
-<col style="width: 36%">
-<col style="width: 40%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Enhancement Method</th>
-<th>Description</th>
-<th>Challenges in Urban Applications</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Mosaicing</strong></td>
-<td>Combines multiple images into one seamless image</td>
-<td>Standard methods may cause radiometric inconsistencies</td>
-</tr>
-<tr class="even">
-<td><strong>Contrast Enhancement</strong></td>
-<td>Improves clarity by enhancing feature contrast</td>
-<td>May over-complicate images, hindering research</td>
-</tr>
-<tr class="odd">
-<td><strong>Creating New Datasets</strong></td>
-<td>Uses band composition/feature extraction</td>
-<td>High computational load and analysis complexity</td>
-</tr>
-</tbody>
-</table>
-<p>These enhancement methods can improve image contrast and clarity, helping to analyze land cover changes more effectively. However, whether added complexity truly benefits the research objectives needs careful consideration.</p>
+<section id="unsupervised-classification" class="level3" data-number="8.1.2">
+<h3 data-number="8.1.2" class="anchored" data-anchor-id="unsupervised-classification"><span class="header-section-number">8.1.2</span> 6.1.2 Unsupervised Classification</h3>
+<p>Unsupervised classification uses the algorithm to group data based on pixel similarity, without predefined labels. The steps are:</p>
+<ul>
+<li><p><strong>Defining the Number of Clusters</strong>: A predefined number of clusters is set.</p></li>
+<li><p><strong>Clustering</strong>: The algorithm groups the pixels based on their spectral similarity.</p></li>
+<li><p><strong>Cluster Labeling</strong>: The resulting clusters are labeled based on additional knowledge or analysis.</p></li>
+</ul>
 <hr>
 </section>
 </section>
-<section id="applications" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">5.2</span> 3.2 Applications</h2>
-<p>Landsat satellites, providing over 50 years of Earth observation data since 1972, have had a profound impact on monitoring urban growth, deforestation, temperature changes, and more.</p>
-<section id="urban-growth-land-use-mapping" class="level3" data-number="5.2.1">
-<h3 data-number="5.2.1" class="anchored" data-anchor-id="urban-growth-land-use-mapping"><span class="header-section-number">5.2.1</span> 3.2.1 Urban Growth &amp; Land Use Mapping</h3>
-<p>One of the most powerful applications of remote sensing is its ability to monitor urban growth and land use changes over time. Satellites like Landsat and Sentinel-2 have been invaluable in tracking the transformation of landscapes, especially as urban areas expand. The integration of Landsat with other datasets, like Sentinel-2 through the Dynamic World project, enables near-real-time land cover mapping, which is crucial for monitoring urbanization, deforestation, and the spread of infrastructure. For example, through the combination of these datasets, researchers can track the extent of urban sprawl, assess changes in built-up areas, and even identify shifts in the types of land cover (e.g., from agriculture to residential). This kind of information is vital for city planners and policymakers in managing sustainable urban growth and mitigating the environmental impact of development. Additionally, urban heat islands, a key environmental concern in cities, can be monitored using thermal infrared data, which helps identify regions that are overheating due to dense urbanization and limited vegetation.</p>
-</section>
-<section id="environmental-monitoring-disaster-response" class="level3" data-number="5.2.2">
-<h3 data-number="5.2.2" class="anchored" data-anchor-id="environmental-monitoring-disaster-response"><span class="header-section-number">5.2.2</span> 3.2.2 Environmental Monitoring &amp; Disaster Response</h3>
-<p>Remote sensing also plays a critical role in environmental monitoring, particularly in disaster response and management. Landsat and Sentinel-2 satellites have been used extensively to monitor wildfires, floods, and changes in ecosystems. For example, Landsat’s long-term data series allows for the analysis of wildfire spread and recovery over decades. These data sets provide valuable insights into the impact of fire on vegetation and soil, and how these ecosystems recover over time. Similarly, Sentinel-2’s high temporal resolution makes it an excellent tool for monitoring environmental changes more frequently, such as detecting the early stages of flooding or tracking the aftermath ofS extreme weather events. Remote sensing also supports vegetation health monitoring by detecting anomalies in plant reflectance, particularly using the near-infrared spectrum, which is sensitive to plant stress. This capability is essential for agriculture, forestry, and conservation efforts, enabling early intervention when vegetation shows signs of degradation, drought, or pest infestations.</p>
+<section id="applications" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">8.2</span> 6.2 Applications</h2>
+<p>Remote sensing classification techniques, particularly supervised and unsupervised methods, have numerous applications in various research fields, urban planning, and policy-making. These methods are extensively used for land use and land cover (LULC) mapping, providing essential insights into urban growth, environmental changes, and resource management.</p>
+<p>For instance, in urban growth monitoring, remote sensing classification plays a crucial role in mapping the expansion of cities. A study by Seto et al.&nbsp;(2011) applied supervised classification to assess the rate of urban sprawl in Chinese cities, quantifying the spatial extent of urban growth and the changes in land use patterns over several decades. This approach allowed for a better understanding of the environmental implications of urban expansion and helped policymakers address the challenges posed by rapid urbanization.</p>
+<p>In the context of disaster management, remote sensing classification techniques are invaluable for assessing damage after natural disasters. Following Hurricane Katrina, Reif et al.&nbsp;(2011) used remote sensing data to classify areas as damaged or undamaged, providing critical information for recovery efforts. By applying supervised classification methods, they were able to differentiate between flooded and non-flooded regions, allowing for more targeted and efficient disaster relief operations.</p>
+<p>Remote sensing classification is also widely used in agriculture, particularly for monitoring crop health and land productivity. Misbah et al.&nbsp;(2022) employed satellite imagery and classification techniques to analyze crop types and forecast yields in African agricultural land. By tracking crop conditions over time, remote sensing contributes to sustainable agricultural practices and informs food security policies, supporting better decision-making for the future of farming.</p>
+<p>These applications highlight the versatility and impact of remote sensing classification techniques across various sectors, providing valuable insights for urban planning, environmental management, disaster response, and agricultural optimization. Furthermore, in the realm of policy development, remote sensing classification supports land-use regulations and environmental laws. Governments use these techniques to monitor urban growth, ensure compliance with zoning policies, and design green urban spaces. Additionally, it informs sustainable agricultural policies by analyzing crop types and land productivity.</p>
+<p><strong>References</strong>:</p>
+<p>Seto, K. C., Güneralp, B., &amp; Hutyra, L. R. (2011). Global forecasts of urban expansion to 2030 and direct impacts on biodiversity and carbon pools. Proceedings of the National Academy of Sciences, 109(40), 16083-16088.</p>
+<p>Reif, M. K., et al.&nbsp;(2011). Post-Katrina Land-Cover, Elevation, and Volume Change Assessment along the South Shore of Lake Pontchartrain, Louisiana, U.S.A. Journal of Coastal Research, 30(10062), 30–39.</p>
+<p>Misbah, K., et al.&nbsp;(2022). Multi-sensors remote sensing applications for assessing, monitoring, and mapping NPK content in soil and crops in African agricultural land. Remote Sensing (Basel, Switzerland), 14(1), 81-.</p>
 <hr>
 </section>
-</section>
-<section id="reflection" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">5.3</span> 3.3 Reflection</h2>
-<p>This week’s practical exercise on atmospheric correction provided invaluable hands-on experience that deepened my understanding of the challenges involved in working with real-world remote sensing data. By applying the Dark Object Subtraction (DOS) method and exploring more advanced techniques like the 6S model, I developed a new appreciation for the delicate balance researchers must strike between accuracy and practicality.</p>
-<p>The most enlightening moment came when I compared my corrected NDVI values with field measurements. While the DOS method clearly enhanced my results compared to using raw data, I observed significant variations in urban areas, where identifying true “dark” pixels proved difficult. This highlighted a crucial limitation I had not fully considered before – preprocessing methods that rely on specific assumptions might work well in certain environments but fail in others.</p>
-<p>What surprised me most was realizing the profound impact these technical decisions can have on research outcomes. A seemingly minor choice of correction method could potentially influence conclusions about vegetation health or urban heat patterns. This made me wonder how many published studies might be affected by similar preprocessing limitations, which may not always be clearly explained in the methods sections.</p>
-<p>Additionally, the exercise made me reflect on the resource constraints researchers face in real-world situations. While I learned about theoretically superior methods like the 6S model, I now understand why many researchers opt for simpler approaches. The time, data requirements, and computational costs associated with advanced methods can be prohibitive, particularly for students or small research teams.</p>
-<p>Overall, data correction and enhancement are essential steps in improving the quality of remote sensing data, enabling more accurate monitoring of urban development and environmental changes. However, increasing the complexity of imagery does not always enhance the research value, and its benefits must be carefully considered in relation to the specific research goals.</p>
+<section id="reflection" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">8.3</span> 6.3 Reflection</h2>
+<p>This week’s lecture on remote sensing classification techniques provided a valuable overview of how geospatial data can be leveraged in urban and environmental research. I gained a solid understanding of the two primary classification methods—supervised and unsupervised classification—and how they can be applied in various contexts such as land cover mapping, disaster assessment, and environmental monitoring. The practical examples were particularly insightful, as they demonstrated the real-world utility of these techniques.</p>
+<p>What I found most enlightening was the distinction between supervised and unsupervised classification. Supervised classification, which relies on labeled training samples, seems ideal when prior knowledge is available, but I recognize that it can be resource-intensive and may introduce bias based on the selected training data. On the other hand, unsupervised classification, which groups data based on inherent patterns, can be useful when limited prior knowledge exists, but it can also result in misclassification if the data patterns are too complex or not well-defined. This has made me think critically about the importance of choosing the right classification approach based on the dataset and research context. In future projects, I will need to be mindful of these trade-offs and select the method that best aligns with the research question and available data.</p>
+<p>Another key takeaway was learning about classification accuracy assessment techniques, such as confusion matrices. While they are an essential tool for validating results, I now appreciate that accuracy assessment alone does not guarantee the quality or interpretability of the classification. For example, in complex urban environments, even accurate classifications may not reflect the true complexity of land cover, especially in rapidly changing or heterogeneous areas. This reminds me of the importance of not relying solely on quantitative accuracy but also integrating qualitative insights and domain knowledge into the interpretation of results.</p>
+<p>Looking ahead, I plan to apply these classification techniques in my research on urban mobility and transportation inequality. For instance, I could use remote sensing data to analyze how urban sprawl impacts transportation infrastructure or explore the spatial relationship between environmental changes and mobility patterns. However, I will need to be cautious about the limitations of these techniques in capturing the full complexity of urban systems and the potential biases inherent in the data.</p>
 
 
 </section>
@@ -737,13 +674,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./Wk2_Presentation.html" class="pagination-link" aria-label="Wk2_Presentation">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Wk2_Presentation</span></span>
+      <a href="./Wk6_GEE.html" class="pagination-link" aria-label="Wk6_GEE">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Wk6_GEE</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Wk4_Policy.html" class="pagination-link" aria-label="Wk4_Policy">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Wk4_Policy</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./W8.html" class="pagination-link" aria-label="W8">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">W8</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -1,9 +1,6 @@
 ---
 title: "Wk4_Policy"
 format: html
-editor: 
-  markdown: 
-    wrap: 72
 ---
 
 # 4 Policy

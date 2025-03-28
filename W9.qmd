@@ -1,7 +1,6 @@
 ---
 title: "W9"
 format: html
-editor: visual
 ---
 
 # 8 Synthetic Aperture Radar (SAR)

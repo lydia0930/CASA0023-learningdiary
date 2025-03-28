@@ -1,7 +1,6 @@
 ---
 title: "W7"
 format: html
-editor: visual
 ---
 
 # 6 Classification I

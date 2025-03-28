@@ -12,4 +12,4 @@ xaringanExtra::embed_xaringan(url = "https://lydia0930.github.io/CASA0023xaringa
                               ratio = "4:3")
 ```
 
-Or use this [Link](https://lydia0930.github.io/CASA0023xaringan/w2-slides.html){.uri}
+use this [Link](https://lydia0930.github.io/CASA0023xaringan/w2-slides.html){.uri}

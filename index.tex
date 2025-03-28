@@ -1,0 +1,1575 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrreprt}
+
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else  
+    % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{5}
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{241,243,245}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={CASA0023 Learning Diary},
+  pdfauthor={Yundi LIU},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{CASA0023 Learning Diary}
+\author{Yundi LIU}
+\date{2025-01-25}
+
+\begin{document}
+\maketitle
+
+\renewcommand*\contentsname{Table of contents}
+{
+\hypersetup{linkcolor=}
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\bookmarksetup{startatroot}
+
+\chapter{CASA0023 Learning Diary}\label{casa0023-learning-diary}
+
+\bookmarksetup{startatroot}
+
+\chapter{Welcome to CASA0023 Learning
+Diary}\label{welcome-to-casa0023-learning-diary}
+
+This is my learning diary for CASA0023. It contains weekly reflections
+and notes on various topics.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Week 1:} Introduction to remote sensing
+\item
+  \textbf{Week 2:} Presentation on sensors
+\item
+  \textbf{Week 3:} Corrections and feedback
+\item
+  \textbf{Week 4:} Policy discussion
+\item
+  \textbf{Week 6:} Google Earth Engine analysis
+\item
+  \textbf{Week 7:} Classification I
+\item
+  \textbf{Week 8:} Classification II
+\item
+  \textbf{Week 9:} Synthetic Aperture Radar (SAR)
+\end{itemize}
+
+\textbf{References and additional materials} are included at the end of
+each note.
+
+\bookmarksetup{startatroot}
+
+\chapter{Wk1\_Introduction\_to\_remote\_sensing}\label{wk1_introduction_to_remote_sensing}
+
+\bookmarksetup{startatroot}
+
+\chapter{1 An Introduction to Remote
+Sensing}\label{an-introduction-to-remote-sensing}
+
+\section{1.1 Summary}\label{summary}
+
+\subsection{1.1.1 Definition of remote
+sensing}\label{definition-of-remote-sensing}
+
+Remote sensing is the science of obtaining information about objects or
+areas from a distance using sensors that detect electromagnetic
+radiation. The electromagnetic spectrum is crucial to understanding
+which wavelengths are useful for different applications. The key diagram
+to include would be the electromagnetic spectrum chart showing different
+wavelengths and their applications in remote sensing.
+
+\subsection{1.1.2. Resolution Types in Remote
+Sensing}\label{resolution-types-in-remote-sensing}
+
+The four essential resolution types determine what can be detected:
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3056}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6944}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Type
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Definition
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Spatial resolution & The size of one pixel in ground units \\
+Spectral resolution & Number and width of spectral bands \\
+Temporal resolution & How often data is collected \\
+Radiometric resolution & Sensitivity to differences in reflected/emitted
+energy \\
+\end{longtable}
+
+It Includes the comparative images showing the same area captured at
+different spatial resolutions (e.g., 30m vs.~10m) to illustrate how
+detail changes.
+
+\subsection{1.1.3. Satellite Systems and Their
+Applications}\label{satellite-systems-and-their-applications}
+
+Major satellite programs like Landsat (historical importance since 1972)
+and Sentinel (newer European missions) provide different capabilities
+for urban monitoring. The lecture highlights specifications including
+revisit time, spatial resolution, and spectral bands. Include the
+satellite timeline diagram showing the evolution of Earth observation
+satellites and their operational periods.
+
+\subsection{1.1.4. Urban Remote Sensing
+Applications}\label{urban-remote-sensing-applications}
+
+Remote sensing enables monitoring urban environments through
+applications like land use classification, urban heat island detection,
+and change detection over time. The thermal imagery showing urban heat
+islands and comparison images of urban growth over decades would be
+essential visuals.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{1.2 Applications}\label{applications}
+
+In my research on remote sensing applications, I have found that these
+technologies provide tools for understanding the urban environment.
+
+How land use mapping is changing urban planning is one such application.
+By analyzing imagery over time, we can track patterns of sprawl and even
+identify informal settlements that traditional surveys might miss. This
+capability is important for rapidly growing cities facing housing
+challenges. Advanced machine learning techniques like object-based image
+analysis (OBIA) now enable automatic classification of urban morphology
+with accuracy exceeding 85\%, allowing planners to quantify not just
+expansion but also densification processes.
+
+In addition to this, urban heat island analysis applications are also
+one of the options as climate issues become more serious. I find it
+compelling that heat sensors can accurately identify hot spots that need
+intervention. NASA Earth Observatory documents a clear pattern of
+temperature differences of up to 10°C between urban and rural areas
+(NASA Earth Observatory, 2021). This could change the way we approach
+urban greening initiatives. Thermal infrared bands on satellites like
+Landsat 8 (bands 10-11) and ECOSTRESS provide surface temperature data
+at resolutions fine enough to correlate UHI intensity with specific
+urban features and materials.
+
+Finally, remote sensing appears to have the most significant impact in
+disaster management applications. Its ability to provide timely
+information throughout the disaster cycle - from vulnerability mapping
+to response guidance and damage assessment - can save countless lives
+and improve recovery efforts. For example, floods, hill fires, and crop
+damage can all be assessed and predicted accordingly. Synthetic Aperture
+Radar (SAR) sensors like those on Sentinel-1 have revolutionized
+disaster monitoring by providing cloud-penetrating imagery day or night,
+enabling near real-time flood extent mapping even during severe weather
+conditions when optical sensors fail.
+
+\includegraphics{index_files/mediabag/denmark_oli_1985-201.png} The
+relationship between green space and relative mental health
+\href{https://earthobservatory.nasa.gov/images/145305/summer-heat-shifts-to-europe}{Source:
+NASA Earth Observatory}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{1.3 Reflection}\label{reflection}
+
+As I engaged with the fundamentals of remote sensing, several thoughtful
+connections emerged about this technology's place in science and
+society.
+
+The evolution of Earth observation technology is remarkable - from early
+Landsat missions to today's specialized satellite constellations. This
+progression mirrors other scientific fields where technological
+advancement has transformed understanding, with remote sensing uniquely
+turning our technological gaze back toward Earth itself.
+
+The concept of different resolutions highlighted an important
+philosophical point about observation. Our choice of resolution
+determines what patterns become visible - broad land cover at coarse
+resolution, individual buildings at finer scales. This reinforces that
+all scientific observation involves choices about scale that
+fundamentally shape understanding.
+
+The democratization of satellite imagery particularly interests me. What
+was once the exclusive domain of governments and corporations is
+increasingly accessible, creating new possibilities for citizen science
+and community monitoring. This shift raises important questions about
+who gets to observe our environment and whose perspectives inform the
+resulting narratives.
+
+I found myself contemplating how remote sensing changes our relationship
+with cities. The bird's-eye perspective offers insights unavailable to
+most urban dwellers yet differs significantly from lived experiences at
+street level. How might these different ways of knowing be integrated
+for more comprehensive urban understanding?
+
+Moving forward in this course, I'm particularly interested in exploring
+how remote sensing data intersects with local knowledge and qualitative
+understanding of places. The most valuable insights likely emerge when
+technological observation and human experience are brought into
+thoughtful conversation rather than treated as separate domains.
+
+\bookmarksetup{startatroot}
+
+\chapter{Wk2\_Presentation}\label{wk2_presentation}
+
+\bookmarksetup{startatroot}
+
+\chapter{2 Presentation}\label{presentation}
+
+These are the introduction slides for the sensor ASTER(Advanced
+Spaceborne Thermal Emission and Reflection Radiometer)
+
+use this
+\href{https://lydia0930.github.io/CASA0023xaringan/w2-slides.html}{Link}
+
+\bookmarksetup{startatroot}
+
+\chapter{Wk3\_Corrections}\label{wk3_corrections}
+
+\bookmarksetup{startatroot}
+
+\chapter{3 Classification I}\label{classification-i}
+
+\section{3.1 Summary}\label{summary-1}
+
+In this lecture, I learned about the fundamentals of remote sensing,
+focusing on data acquisition, sensor technologies, data processing, and
+their applications in urban and environmental studies. The session was
+divided into two main parts: image correction and data mosaicing and
+enhancement. Below are the key takeaways:
+
+\subsection{3.1.1 Sensor Types and
+Mechanisms}\label{sensor-types-and-mechanisms}
+
+Remote sensing sensors are at the core of remote sensing technology, and
+different types of sensors employ different imaging mechanisms. The
+following table compares two common types of sensors:
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2361}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4861}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2778}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Sensor Type
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Working Principle
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Pros \& Cons
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Whisk broom (cross-track scanner) & Uses a rotating mirror to reflect
+light onto a single detector, covering a large area & Wide coverage, but
+moving parts can wear out \\
+Push broom (along-track scanner) & Uses detector arrays for faster and
+more efficient imaging & High efficiency, but requires precise
+calibration \\
+MSS (Multispectral Scanner) & Uses a digital approach to capture
+multispectral data (visible + near-infrared) & Provides better data
+continuity and accuracy \\
+\end{longtable}
+
+Through these different sensor technologies, remote sensing systems are
+able to capture various types of land feature data based on specific
+needs.
+
+\subsection{3.1.2 Data Correction
+Process}\label{data-correction-process}
+
+Satellite imagery often requires correction before it can be used for
+analysis. The following diagram shows the typical correction process:
+
+\begin{itemize}
+\item
+  Start with a Raw Satellite Image.
+\item
+  Perform Geometric Correction to fix distortions caused by sensor
+  motion or the Earth's curvature.
+\item
+  Apply Atmospheric Correction to remove haze or scattering effects, for
+  example, using dark object subtraction.
+\item
+  Proceed with Terrain Correction to adjust for elevation differences,
+  such as through orthorectification.
+\end{itemize}
+
+Data correction is a crucial first step to ensure the accuracy and
+usability of remote sensing imagery. By applying geometric correction,
+atmospheric correction, and terrain correction, we can eliminate
+external disturbances and improve the precision of the data.
+
+\subsection{3.1.3 Data Mosaicing and
+Enhancement}\label{data-mosaicing-and-enhancement}
+
+Mosaicing and enhancement techniques are vital for improving remote
+sensing imagery, especially for urban and environmental studies.
+However, these techniques must be chosen based on the specific needs of
+the study. Standard mosaicing methods may not always be suitable for
+satellite imagery, as there can be discrepancies in lighting and
+radiometric calibration between images.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2361}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3611}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4028}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Enhancement Method
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Description
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Challenges in Urban Applications
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Mosaicing} & Combines multiple images into one seamless image &
+Standard methods may cause radiometric inconsistencies \\
+\textbf{Contrast Enhancement} & Improves clarity by enhancing feature
+contrast & May over-complicate images, hindering research \\
+\textbf{Creating New Datasets} & Uses band composition/feature
+extraction & High computational load and analysis complexity \\
+\end{longtable}
+
+These enhancement methods can improve image contrast and clarity,
+helping to analyze land cover changes more effectively. However, whether
+added complexity truly benefits the research objectives needs careful
+consideration.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{3.2 Applications}\label{applications-1}
+
+Landsat satellites, providing over 50 years of Earth observation data
+since 1972, have had a profound impact on monitoring urban growth,
+deforestation, temperature changes, and more.
+
+\subsection{3.2.1 Urban Growth \& Land Use
+Mapping}\label{urban-growth-land-use-mapping}
+
+One of the most powerful applications of remote sensing is its ability
+to monitor urban growth and land use changes over time. Satellites like
+Landsat and Sentinel-2 have been invaluable in tracking the
+transformation of landscapes, especially as urban areas expand. The
+integration of Landsat with other datasets, like Sentinel-2 through the
+Dynamic World project, enables near-real-time land cover mapping, which
+is crucial for monitoring urbanization, deforestation, and the spread of
+infrastructure. For example, through the combination of these datasets,
+researchers can track the extent of urban sprawl, assess changes in
+built-up areas, and even identify shifts in the types of land cover
+(e.g., from agriculture to residential). This kind of information is
+vital for city planners and policymakers in managing sustainable urban
+growth and mitigating the environmental impact of development.
+Additionally, urban heat islands, a key environmental concern in cities,
+can be monitored using thermal infrared data, which helps identify
+regions that are overheating due to dense urbanization and limited
+vegetation.
+
+\subsection{3.2.2 Environmental Monitoring \& Disaster
+Response}\label{environmental-monitoring-disaster-response}
+
+Remote sensing also plays a critical role in environmental monitoring,
+particularly in disaster response and management. Landsat and Sentinel-2
+satellites have been used extensively to monitor wildfires, floods, and
+changes in ecosystems. For example, Landsat's long-term data series
+allows for the analysis of wildfire spread and recovery over decades.
+These data sets provide valuable insights into the impact of fire on
+vegetation and soil, and how these ecosystems recover over time.
+Similarly, Sentinel-2's high temporal resolution makes it an excellent
+tool for monitoring environmental changes more frequently, such as
+detecting the early stages of flooding or tracking the aftermath ofS
+extreme weather events. Remote sensing also supports vegetation health
+monitoring by detecting anomalies in plant reflectance, particularly
+using the near-infrared spectrum, which is sensitive to plant stress.
+This capability is essential for agriculture, forestry, and conservation
+efforts, enabling early intervention when vegetation shows signs of
+degradation, drought, or pest infestations.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{3.3 Reflection}\label{reflection-1}
+
+This week's practical exercise on atmospheric correction provided
+invaluable hands-on experience that deepened my understanding of the
+challenges involved in working with real-world remote sensing data. By
+applying the Dark Object Subtraction (DOS) method and exploring more
+advanced techniques like the 6S model, I developed a new appreciation
+for the delicate balance researchers must strike between accuracy and
+practicality.
+
+The most enlightening moment came when I compared my corrected NDVI
+values with field measurements. While the DOS method clearly enhanced my
+results compared to using raw data, I observed significant variations in
+urban areas, where identifying true ``dark'' pixels proved difficult.
+This highlighted a crucial limitation I had not fully considered before
+-- preprocessing methods that rely on specific assumptions might work
+well in certain environments but fail in others.
+
+What surprised me most was realizing the profound impact these technical
+decisions can have on research outcomes. A seemingly minor choice of
+correction method could potentially influence conclusions about
+vegetation health or urban heat patterns. This made me wonder how many
+published studies might be affected by similar preprocessing
+limitations, which may not always be clearly explained in the methods
+sections.
+
+Additionally, the exercise made me reflect on the resource constraints
+researchers face in real-world situations. While I learned about
+theoretically superior methods like the 6S model, I now understand why
+many researchers opt for simpler approaches. The time, data
+requirements, and computational costs associated with advanced methods
+can be prohibitive, particularly for students or small research teams.
+
+Overall, data correction and enhancement are essential steps in
+improving the quality of remote sensing data, enabling more accurate
+monitoring of urban development and environmental changes. However,
+increasing the complexity of imagery does not always enhance the
+research value, and its benefits must be carefully considered in
+relation to the specific research goals.
+
+\bookmarksetup{startatroot}
+
+\chapter{Wk4\_Policy}\label{wk4_policy}
+
+\bookmarksetup{startatroot}
+
+\chapter{4 Policy}\label{policy}
+
+Week 4 focused on the applications of remote sensing to policy, and I
+made a case study in Singapore.
+
+\section{4.1 Summary}\label{summary-2}
+
+\subsection{4.1.1 City Summary}\label{city-summary}
+
+Singapore is a highly urbanized city-state located at the southern tip
+of the Malay Peninsula in Southeast Asia. With a land area of just 728
+km² and a population of 5.9 million, Singapore is one of the world's
+most densely populated countries. The nation faces unique challenges due
+to its limited land resources, including food security concerns as it
+imports over 90\% of its food supply, vulnerability to climate change
+effects like sea-level rise, and urban heat island intensification due
+to its dense urban development.
+
+\subsection{4.1.2 Policy Summary}\label{policy-summary}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Global Policy Overview}:
+
+  Sustainable Development Goals (SDGs) Singapore has committed to
+  implementing the United Nations' Sustainable Development Goals (SDGs),
+  with particular emphasis on SDG 11 (Sustainable Cities and
+  Communities) and SDG 13 (Climate Action). As a highly urbanized nation
+  with limited natural resources, Singapore has prioritized creating a
+  sustainable, resilient urban environment.
+\item
+  \textbf{Singapore Green Plan 2030} (Singapore Ministry of
+  Sustainability and the Environment, 2021)
+
+  The Singapore Green Plan 2030, launched by the government in 2021,
+  serves as a national roadmap toward sustainable development and
+  net-zero emissions. The plan integrates remote sensing technology to
+  monitor environmental changes, track policy implementation, and
+  evaluate effectiveness across various domains. Singapore's Urban
+  Redevelopment Authority (URA) and National Environment Agency (NEA)
+  have partnered with research institutions to employ Earth observation
+  data for urban planning, environmental monitoring, and climate
+  adaptation. This partnership leverages remote sensing to map urban
+  heat islands, monitor green space development, and assess coastal
+  changes to inform policy decisions and future planning.
+
+  \begin{longtable}[]{@{}
+    >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.4306}}
+    >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5694}}@{}}
+  \toprule\noalign{}
+  \begin{minipage}[b]{\linewidth}\raggedright
+  Goal
+  \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+  Target
+  \end{minipage} \\
+  \midrule\noalign{}
+  \endhead
+  \bottomrule\noalign{}
+  \endlastfoot
+  Increasing urban green cover & From \textbf{47\% to 50\%} by 2030 \\
+  Green spaces and trees & \textbf{1,000 hectares} of green spaces,
+  \textbf{one million additional trees} \\
+  Local food production & \textbf{20\%} of Singapore's total food demand
+  by 2030 \\
+  Waste reduction & \textbf{30\%} reduction in waste sent to landfill by
+  2030 \\
+  Solar energy expansion & \textbf{8,000 hectares} of solar panels on
+  rooftops and reservoirs by 2030 \\
+  Climate resilience & Strategies against \textbf{sea-level rise and
+  extreme weather events} \\
+  Water resource management & Sustainable management through
+  \textbf{catchment management} \\
+  \end{longtable}
+\end{enumerate}
+
+\includegraphics[width=0.7\textwidth,height=\textheight]{index_files/mediabag/image_2022_12_09T06_.png}
+
+\href{https://www.greenplan.gov.sg/}{Source:Singapore greenplan}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{4.2 Application}\label{application}
+
+This section identifies how remotely sensed data could be used to
+contribute to Singapore's policy goals, answering the question:
+\textbf{`How could the data be applied to solve the policy challenge?'}
+
+\subsection{4.2.1 Data Sources}\label{data-sources}
+
+Singapore employs multiple remote sensing platforms to support its Green
+Plan implementation:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Satellite Imagery:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Sentinel-2}: Provides 10m resolution multispectral data to
+    monitor urban vegetation changes.
+  \item
+    \textbf{Landsat data}: Offers a historical perspective for long-term
+    change analysis.
+  \item
+    \textbf{Thermal Mapping}:
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Landsat 8/9 thermal bands and ECOSTRESS data identify urban heat
+      islands.
+    \item
+      Temperature readings are accurate to within 1°C.
+    \end{itemize}
+  \end{itemize}
+\item
+  \textbf{Unmanned Aerial Vehicles (UAVs):}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Provides ultra-high resolution (sub-meter) imagery.
+  \item
+    Used for monitoring specific urban projects, tree health in parks,
+    and rooftop gardens.
+  \end{itemize}
+\item
+  \textbf{Aerial LiDAR Surveys:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Creates detailed 3D models of the urban environment.
+  \item
+    Essential for vegetation structure analysis and building-level
+    energy studies.
+  \end{itemize}
+\end{itemize}
+
+\subsection{4.2.2 Techniques}\label{techniques}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Urban Heat Island Monitoring}
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Acquire thermal infrared imagery from satellites and aerial platforms.
+\item
+  Calibrate and correct imagery for atmospheric effects.
+\item
+  Generate surface temperature maps across the urban area.
+\item
+  Identify heat island hotspots and correlate with urban features.
+\item
+  Track temperature changes in relation to green infrastructure
+  implementation.
+\item
+  Develop targeted cooling strategies for hotspot areas.
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Green Space Assessment}
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Acquire high-resolution multispectral imagery.
+\item
+  Calculate vegetation indices (\textbf{NDVI, EVI}) to quantify
+  greenery.
+\item
+  Classify urban vegetation types (\textbf{tree canopy, shrubs, grass}).
+\item
+  Monitor changes in green cover over time.
+\item
+  Evaluate effectiveness of tree-planting initiatives.
+\item
+  Identify priority areas for new green space development.
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Coastal Change Monitoring}
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Acquire satellite and aerial imagery of coastal areas.
+\item
+  Use \textbf{SAR imagery} for high-precision elevation measurements.
+\item
+  Detect changes in shoreline position and elevation.
+\item
+  Monitor effectiveness of coastal protection measures.
+\item
+  Model areas vulnerable to sea-level rise.
+\item
+  Develop adaptive strategies for coastal infrastructure.
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Urban Agriculture Mapping}
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Identify existing and potential rooftop farming locations.
+\item
+  Monitor productivity of urban farms with multispectral imagery.
+\item
+  Calculate potential food production capacity across the city.
+\item
+  Track progress toward \textbf{30\% local food production goal}.
+\item
+  Optimize urban farming techniques based on remote sensing data.
+\end{enumerate}
+
+\textbf{References}:
+
+Singapore Ministry of Sustainability and the Environment (2021).
+``Singapore Green Plan 2030'' (Official government website)
+https://www.greenplan.gov.sg/
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{4.3 Reflection}\label{reflection-2}
+
+Singapore's application of remote sensing technologies to support its
+Green Plan 2030 demonstrates how a land-constrained city-state can
+leverage Earth observation data to inform sustainable development
+policies. The integration of satellite, aerial, and UAV platforms
+provides multi-scale monitoring capabilities that match the precision
+requirements of Singapore's urban planning and environmental management
+needs.
+
+What I find most interesting about Singapore's approach is how necessity
+has driven innovation. With extremely limited land resources and high
+vulnerability to climate change, Singapore cannot afford planning
+mistakes or ineffective environmental policies. Remote sensing provides
+the evidence base needed to optimize every square meter of the urban
+landscape for multiple benefits -- from cooling effects to food
+production to biodiversity support.
+
+Singapore's coastal monitoring is particularly critical given that
+approximately 30\% of the island lies less than 5 meters above sea
+level. The combination of satellite-based monitoring and detailed
+elevation modeling enables planners to prioritize adaptation measures
+where they're most needed, potentially saving billions in infrastructure
+costs through targeted interventions.
+
+The city-state's approach to urban heat island mitigation could serve as
+a model for other tropical cities. By systematically mapping surface
+temperatures against urban morphology and vegetation cover, Singapore
+has developed precise guidelines for how much and what type of urban
+greenery is needed to achieve specific cooling targets. This data-driven
+approach to climate adaptation could be valuable across Southeast Asia,
+where many megacities face similar heat challenges. An output of
+Singapore's urban greening policy can be seen in Figure, showing the
+integration of vegetation into high-density urban areas through
+innovative vertical gardens.
+
+\includegraphics[width=0.8\textwidth,height=\textheight]{index_files/mediabag/parkroyal-on-pickeri.jpg}
+
+Vertical gardens on residential buildings in Singapore
+\href{https://www.crabintheair.com/wp-content/uploads/2017/02/parkroyal-on-pickering-review-e1537299078683.jpg}{Source}
+
+\bookmarksetup{startatroot}
+
+\chapter{Wk6\_GEE}\label{wk6_gee}
+
+\bookmarksetup{startatroot}
+
+\chapter{5 Google Earth Engine}\label{google-earth-engine}
+
+The week mainly focuses on utilizing Google Earth Engine (GEE) for
+remote sensing data processing, covering key functions such as image
+filtering, NDVI computation, mosaicking, and spatial analysis for urban
+and environmental applications.
+
+\section{5.1 Summary}\label{summary-3}
+
+In this week's lecture, we explored Google Earth Engine (GEE) and its
+application in processing remote sensing data. GEE is a cloud-based
+geospatial analysis platform that allows large-scale processing of
+satellite imagery.
+
+Key topics covered in the session included:
+
+\begin{itemize}
+\tightlist
+\item
+  Loading and filtering satellite imagery using Landsat 9 surface
+  reflectance data.
+\item
+  Computing indices such as NDVI (Normalized Difference Vegetation
+  Index) to assess vegetation health.
+\item
+  Mosaicking and clipping images to refine analysis within specific
+  study areas.
+\item
+  Exporting processed images to Google Drive for further analysis.
+\end{itemize}
+
+Below is an example of computing NDVI in GEE:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{// Load Landsat 9 imagery and filter by date}
+\KeywordTok{var}\NormalTok{ dataset }\OperatorTok{=}\NormalTok{ ee}\OperatorTok{.}\FunctionTok{ImageCollection}\NormalTok{(}\StringTok{\textquotesingle{}LANDSAT/LC09/C02/T1\_L2\textquotesingle{}}\NormalTok{)}
+    \OperatorTok{.}\FunctionTok{filterDate}\NormalTok{(}\StringTok{\textquotesingle{}2022{-}01{-}01\textquotesingle{}}\OperatorTok{,} \StringTok{\textquotesingle{}2022{-}02{-}01\textquotesingle{}}\NormalTok{)}\OperatorTok{;}
+
+\CommentTok{// Compute NDVI using NIR (Band 5) and Red (Band 4)}
+\KeywordTok{var}\NormalTok{ ndvi }\OperatorTok{=}\NormalTok{ dataset}\OperatorTok{.}\FunctionTok{first}\NormalTok{()}\OperatorTok{.}\FunctionTok{normalizedDifference}\NormalTok{([}\StringTok{\textquotesingle{}SR\_B5\textquotesingle{}}\OperatorTok{,} \StringTok{\textquotesingle{}SR\_B4\textquotesingle{}}\NormalTok{])}\OperatorTok{.}\FunctionTok{rename}\NormalTok{(}\StringTok{\textquotesingle{}NDVI\textquotesingle{}}\NormalTok{)}\OperatorTok{;}
+
+\CommentTok{// Display NDVI layer with color visualization}
+\BuiltInTok{Map}\OperatorTok{.}\FunctionTok{addLayer}\NormalTok{(ndvi}\OperatorTok{,}\NormalTok{ \{}\DataTypeTok{min}\OperatorTok{:} \DecValTok{0}\OperatorTok{,} \DataTypeTok{max}\OperatorTok{:} \DecValTok{1}\OperatorTok{,} \DataTypeTok{palette}\OperatorTok{:}\NormalTok{ [}\StringTok{\textquotesingle{}blue\textquotesingle{}}\OperatorTok{,} \StringTok{\textquotesingle{}white\textquotesingle{}}\OperatorTok{,} \StringTok{\textquotesingle{}green\textquotesingle{}}\NormalTok{]\}}\OperatorTok{,} \StringTok{\textquotesingle{}NDVI\textquotesingle{}}\NormalTok{)}\OperatorTok{;}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics[width=0.8\textwidth,height=\textheight]{index_files/mediabag/NDVI.jpg}
+
+Generated Normalized Difference Vegetation Index (NDVI) from the
+satellite images
+\href{https://upload.wikimedia.org/wikipedia/commons/a/ae/NDVI.jpg}{Source:
+wikipedia}
+
+This lecture reinforced the importance of cloud computing in geospatial
+analysis, making it possible to handle large datasets efficiently.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{5.2 Applications}\label{applications-2}
+
+GEE plays a crucial role in urban studies, environmental monitoring, and
+policy analysis, offering scalable solutions for spatial data
+processing. It is widely used in land-use classification, climate change
+research, and urban heat island analysis.
+
+For example, research by Gorelick et al.~(2017) highlights GEE's
+capability in multi-temporal analysis of land cover changes, enabling
+researchers to assess urban expansion over time. Similarly, Gong et
+al.~(2019) utilized GEE for global land cover mapping, demonstrating its
+effectiveness in large-scale remote sensing applications.
+
+In the policy domain, GEE is instrumental in monitoring deforestation
+and urban sprawl, assisting government agencies in spatial planning and
+disaster management (Hansen et al., 2013). By integrating socio-economic
+datasets, GEE can also help in analyzing transport accessibility and
+social inequalities, making it a valuable tool in urban planning and
+mobility studies.
+
+\includegraphics[width=0.8\textwidth,height=\textheight]{index_files/mediabag/remotesensing-12-016.jpg}
+
+\href{https://www.mdpi.com/remotesensing/remotesensing-12-01655/article_deploy/html/images/remotesensing-12-01655-g007-550.jpg}{Source:MDPI
+Remote Sensing}
+
+\textbf{References}:
+
+Gorelick, N., Hancher, M., Dixon, M., Ilyushchenko, S., Thau, D., \&
+Moore, R. (2017). Google Earth Engine: Planetary-scale geospatial
+analysis for everyone. Remote Sensing of Environment, 202, 18-27.
+
+Gong, P., Li, X., \& Zhang, W. (2019). 40-Year global land cover change
+dataset based on Landsat imagery. Science Bulletin, 64(11), 756-763.
+
+Hansen, M. C., Potapov, P. V., Moore, R., Hancher, M., Turubanova, S.
+A., Tyukavina, A., et al.~(2013). High-resolution global maps of
+21st-century forest cover change. Science, 342(6160), 850-853.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{5.3 Reflection}\label{reflection-3}
+
+This week was my first introduction to Google Earth Engine (GEE), and
+it's been an exciting start to exploring how cloud-based platforms can
+transform remote sensing analysis. GEE's ability to process large-scale
+satellite imagery efficiently is impressive, and it's truly fascinating
+that it allows for analysis at a global scale while also enabling a
+zoomed-in focus on specific countries or regions. As a beginner, I found
+it easy to filter and visualize Landsat data, and the speed of
+processing was a big advantage compared to traditional methods. The
+hands-on approach of working directly with satellite imagery, like
+computing NDVI to analyze vegetation health, was a valuable learning
+experience.
+
+However, as much as I'm amazed by GEE's power, this week also made me
+reflect critically on the limitations of remote sensing. For instance,
+the example involving famine highlighted an important lesson: while
+satellite data can provide valuable insights, it can't tell the whole
+story. Remote sensing is often most effective when combined with other
+contextual data, such as socioeconomic or local environmental
+information. This reinforces the point that while tools like GEE are
+powerful, they need to be used thoughtfully and in combination with
+other data sources to ensure that conclusions are meaningful and useful
+for decision-making.
+
+I also realized that, although GEE streamlines complex processes like
+mosaicking and clipping, working with satellite imagery still requires
+careful attention to detail. There are steps, such as atmospheric
+corrections, that need to be carefully considered to ensure data
+accuracy. This session has reinforced the idea that tools like GEE are
+incredibly useful, but they also require critical thinking and domain
+knowledge to interpret the results properly.
+
+In the future, I look forward to diving deeper into GEE and learning how
+to leverage its capabilities for more complex urban and environmental
+studies. The experience has opened my eyes to the potential of
+cloud-based geospatial tools, and I'm excited to apply them in my
+research.
+
+\bookmarksetup{startatroot}
+
+\chapter{W7}\label{w7}
+
+\bookmarksetup{startatroot}
+
+\chapter{6 Classification I}\label{classification-i-1}
+
+The sixth lecture of CASA0023 covers remote sensing classification
+techniques, which are crucial for interpreting satellite and aerial
+imagery. These methods are used to classify land cover and land use, and
+they are key in urban planning, environmental monitoring, and disaster
+management.
+
+\section{6.1 Summary}\label{summary-4}
+
+Classification assigns pixels in remote sensing images to predefined
+categories. The primary classification methods are:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Supervised Classification}: This method requires labeled
+  training samples to train the classifier. Common algorithms include
+  Maximum Likelihood, Support Vector Machines (SVM), and Random Forest.
+\item
+  \textbf{Unsupervised Classification}: This technique does not require
+  labeled samples. Instead, it clusters the pixels based on their
+  spectral properties. Popular algorithms include K-Means and ISODATA.
+\end{itemize}
+
+\includegraphics{index_files/mediabag/0-Uzqy-gqZg77Wun0e.webp}
+
+Supervised vs Unsupervised Classification
+\href{https://medium.com/@recrosoft.io/supervised-vs-unsupervised-learning-key-differences-cdd46206cdcb}{Source}
+
+\subsection{6.1.1 Supervised
+Classification}\label{supervised-classification}
+
+Supervised classification involves four main steps:
+
+\begin{itemize}
+\item
+  \textbf{Training Sample Collection}: Representative areas of different
+  land cover types are selected to create labeled training data.
+\item
+  \textbf{Training the Classifier}: The classifier is trained using
+  these samples.
+\item
+  \textbf{Classifying}: The trained classifier is applied to the entire
+  image to assign each pixel a category.
+\item
+  \textbf{Accuracy Assessment}: The classification result is evaluated
+  using metrics like confusion matrices to assess its accuracy.
+\end{itemize}
+
+\subsection{6.1.2 Unsupervised
+Classification}\label{unsupervised-classification}
+
+Unsupervised classification uses the algorithm to group data based on
+pixel similarity, without predefined labels. The steps are:
+
+\begin{itemize}
+\item
+  \textbf{Defining the Number of Clusters}: A predefined number of
+  clusters is set.
+\item
+  \textbf{Clustering}: The algorithm groups the pixels based on their
+  spectral similarity.
+\item
+  \textbf{Cluster Labeling}: The resulting clusters are labeled based on
+  additional knowledge or analysis.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{6.2 Applications}\label{applications-3}
+
+Remote sensing classification techniques, particularly supervised and
+unsupervised methods, have numerous applications in various research
+fields, urban planning, and policy-making. These methods are extensively
+used for land use and land cover (LULC) mapping, providing essential
+insights into urban growth, environmental changes, and resource
+management.
+
+For instance, in urban growth monitoring, remote sensing classification
+plays a crucial role in mapping the expansion of cities. A study by Seto
+et al.~(2011) applied supervised classification to assess the rate of
+urban sprawl in Chinese cities, quantifying the spatial extent of urban
+growth and the changes in land use patterns over several decades. This
+approach allowed for a better understanding of the environmental
+implications of urban expansion and helped policymakers address the
+challenges posed by rapid urbanization.
+
+In the context of disaster management, remote sensing classification
+techniques are invaluable for assessing damage after natural disasters.
+Following Hurricane Katrina, Reif et al.~(2011) used remote sensing data
+to classify areas as damaged or undamaged, providing critical
+information for recovery efforts. By applying supervised classification
+methods, they were able to differentiate between flooded and non-flooded
+regions, allowing for more targeted and efficient disaster relief
+operations.
+
+Remote sensing classification is also widely used in agriculture,
+particularly for monitoring crop health and land productivity. Misbah et
+al.~(2022) employed satellite imagery and classification techniques to
+analyze crop types and forecast yields in African agricultural land. By
+tracking crop conditions over time, remote sensing contributes to
+sustainable agricultural practices and informs food security policies,
+supporting better decision-making for the future of farming.
+
+These applications highlight the versatility and impact of remote
+sensing classification techniques across various sectors, providing
+valuable insights for urban planning, environmental management, disaster
+response, and agricultural optimization. Furthermore, in the realm of
+policy development, remote sensing classification supports land-use
+regulations and environmental laws. Governments use these techniques to
+monitor urban growth, ensure compliance with zoning policies, and design
+green urban spaces. Additionally, it informs sustainable agricultural
+policies by analyzing crop types and land productivity.
+
+\textbf{References}:
+
+Seto, K. C., Güneralp, B., \& Hutyra, L. R. (2011). Global forecasts of
+urban expansion to 2030 and direct impacts on biodiversity and carbon
+pools. Proceedings of the National Academy of Sciences, 109(40),
+16083-16088.
+
+Reif, M. K., et al.~(2011). Post-Katrina Land-Cover, Elevation, and
+Volume Change Assessment along the South Shore of Lake Pontchartrain,
+Louisiana, U.S.A. Journal of Coastal Research, 30(10062), 30--39.
+
+Misbah, K., et al.~(2022). Multi-sensors remote sensing applications for
+assessing, monitoring, and mapping NPK content in soil and crops in
+African agricultural land. Remote Sensing (Basel, Switzerland), 14(1),
+81-.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{6.3 Reflection}\label{reflection-4}
+
+This week's lecture on remote sensing classification techniques provided
+a valuable overview of how geospatial data can be leveraged in urban and
+environmental research. I gained a solid understanding of the two
+primary classification methods---supervised and unsupervised
+classification---and how they can be applied in various contexts such as
+land cover mapping, disaster assessment, and environmental monitoring.
+The practical examples were particularly insightful, as they
+demonstrated the real-world utility of these techniques.
+
+What I found most enlightening was the distinction between supervised
+and unsupervised classification. Supervised classification, which relies
+on labeled training samples, seems ideal when prior knowledge is
+available, but I recognize that it can be resource-intensive and may
+introduce bias based on the selected training data. On the other hand,
+unsupervised classification, which groups data based on inherent
+patterns, can be useful when limited prior knowledge exists, but it can
+also result in misclassification if the data patterns are too complex or
+not well-defined. This has made me think critically about the importance
+of choosing the right classification approach based on the dataset and
+research context. In future projects, I will need to be mindful of these
+trade-offs and select the method that best aligns with the research
+question and available data.
+
+Another key takeaway was learning about classification accuracy
+assessment techniques, such as confusion matrices. While they are an
+essential tool for validating results, I now appreciate that accuracy
+assessment alone does not guarantee the quality or interpretability of
+the classification. For example, in complex urban environments, even
+accurate classifications may not reflect the true complexity of land
+cover, especially in rapidly changing or heterogeneous areas. This
+reminds me of the importance of not relying solely on quantitative
+accuracy but also integrating qualitative insights and domain knowledge
+into the interpretation of results.
+
+Looking ahead, I plan to apply these classification techniques in my
+research on urban mobility and transportation inequality. For instance,
+I could use remote sensing data to analyze how urban sprawl impacts
+transportation infrastructure or explore the spatial relationship
+between environmental changes and mobility patterns. However, I will
+need to be cautious about the limitations of these techniques in
+capturing the full complexity of urban systems and the potential biases
+inherent in the data.
+
+\bookmarksetup{startatroot}
+
+\chapter{W8}\label{w8}
+
+\bookmarksetup{startatroot}
+
+\chapter{7 Classification II}\label{classification-ii}
+
+\section{7.1 Summary}\label{summary-5}
+
+In this week's lecture, we explored the evolution of data processing
+methods in remote sensing, starting with traditional pixel-based
+analysis and progressing to more advanced techniques.
+
+\begin{itemize}
+\item
+  \textbf{Pixel-based Analysis}: Early remote sensing relied on
+  pixel-based analysis, where each pixel was classified based on its
+  spectral characteristics. While this method was a starting point, it
+  had limitations when dealing with complex land surfaces. Each pixel
+  was treated independently, failing to account for neighboring spatial
+  patterns.
+\item
+  \textbf{Sub-pixel Analysis}: To improve upon pixel-based methods,
+  sub-pixel analysis was introduced. This approach assumes that each
+  pixel's spectral reflectance is a mixture of multiple land cover
+  types. Spectral Mixture Analysis (SMA) decomposes the spectral
+  features within pixels and estimates the proportions of different land
+  cover types, making it more effective for analyzing mixed land
+  surfaces.
+\item
+  \textbf{Object-Based Image Analysis (OBIA)}: A significant
+  advancement, OBIA groups neighboring pixels into objects, improving
+  classification accuracy by considering spatial and spectral
+  characteristics together. One common algorithm used in OBIA is the
+  SLIC (Simple Linear Iterative Clustering) algorithm, which divides an
+  image into superpixels that are more meaningful for analysis.
+\end{itemize}
+
+\includegraphics{index_files/mediabag/Comparison-of-tradit.ppm}
+Comparison of traditional pixel-based classification vs.~newer
+object-based classification for part of the Tiffin River study area
+\href{https://www.researchgate.net/figure/Comparison-of-traditional-pixel-based-classification-vs-newer-object-based_fig5_254599984}{Source}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Accuracy Assessment}: To evaluate the performance of
+  classification models, several accuracy assessment methods are used:
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Confusion Matrix: A key tool for understanding classification errors.
+\item
+  ROC Curve Analysis: Provides a graphical representation of model
+  performance, with a higher AUROC value indicating better model
+  performance.
+\item
+  Spatial Cross-Validation: Unlike traditional cross-validation, spatial
+  cross-validation ensures that training and test sets are spatially
+  separated to avoid spatial autocorrelation and ``spatial cheating,''
+  which can lead to biased results.
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Overfitting Considerations}: A key challenge in machine
+  learning is overfitting, where models perform well on training data
+  but fail to generalize to new data. To avoid overfitting, it's
+  important to: Choose appropriate methods based on data
+  characteristics. Select the right number of endmembers for sub-pixel
+  analysis. Use multiple accuracy metrics and account for spatial
+  autocorrelation.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{7.2 Applications}\label{applications-4}
+
+Remote sensing classification techniques have found broad applications
+in both public health and biodiversity conservation, enabling more
+effective monitoring of disease transmission and environmental changes,
+which are crucial for understanding human health risks and preserving
+biodiversity.
+
+\subsection{7.2.1 Public Health and
+Epidemiology}\label{public-health-and-epidemiology}
+
+Remote sensing classification techniques have become an essential tool
+in spatial epidemiology, providing invaluable insights into disease
+transmission and environmental health. These techniques allow for the
+mapping of population distributions and movement patterns, which are
+critical for understanding how diseases spread, as demonstrated by Tatem
+et al.~(2017). The potential of remote sensing was particularly evident
+during the COVID-19 pandemic, where satellite imagery was used to
+analyze urban environmental conditions, map population density, track
+transmission risk zones, and explore socio-environmental factors
+influencing disease spread.
+
+\subsection{7.2.2 Biodiversity
+Conservation}\label{biodiversity-conservation}
+
+Remote sensing has also played a key role in biodiversity conservation.
+By leveraging advanced classification methods, Hansen et al.~(2013)
+mapped global forest cover changes, offering crucial data for
+understanding ecosystem dynamics and deforestation patterns. These
+techniques have been instrumental in monitoring forest cover and
+detecting subtle ecological transformations, as well as in assessing the
+impact of environmental changes on biodiversity.
+
+In addition, remote sensing has been widely applied in habitat and
+species distribution studies. Leimgruber et al.~(2005) used these
+techniques to map critical habitats for endangered species, analyze
+landscape fragmentation, and monitor habitat quality. Moreover, these
+tools have proven valuable in tracking shifts in vegetation zones,
+identifying climate-induced ecosystem changes, and predicting potential
+species migration patterns, as highlighted by Horning et al.~(2010).
+
+\textbf{References}:
+
+Tatem, A. J., et al.~(2017). Mapping population and pathogen movements.
+Trends in Parasitology, 33(9), arus-735.
+
+Hansen, M. C., et al.~(2013). High-resolution global maps of
+21st-century forest cover change. Science, 342(6160), 850-853.
+
+Leimgruber, P., et al.~(2005). Fragmentation of Asia's remaining
+wildlands. Science, 307(5711), 818-823.
+
+Horning, N., et al.~(2010). Remote sensing for ecology and conservation.
+Oxford University Press.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{7.3 Reflection}\label{reflection-5}
+
+This week's content gave me a deeper understanding of remote sensing
+classification techniques. At first, I was amazed by how powerful these
+methods are, especially in helping us understand complex features of the
+Earth's surface. When processing remote sensing data, methods like
+pixel-based analysis and sub-pixel analysis provided me with many new
+insights. However, I also realized that these methods aren't
+one-size-fits-all. For example, traditional pixel classification seems
+simple but doesn't consider the spatial relationships between pixels,
+which is a crucial aspect of natural environments.
+
+Additionally, the introduction of sub-pixel analysis gave me a new
+perspective on how to describe land cover types more accurately. By
+decomposing the spectral characteristics within each pixel, sub-pixel
+analysis helps us extract more detailed information from complex
+surfaces. This method made me realize that remote sensing isn't just
+about ``processing'' images, but about digging deeper into the
+information behind them.
+
+While learning these techniques, I also began reflecting on how to apply
+them more effectively. For instance, avoiding overfitting is something I
+need to be cautious about. Many times, when applying these methods, it's
+easy to be distracted by noise in the data, leading to a model that
+performs well on training data but doesn't generalize effectively to new
+data. This issue made me realize that behind an accurate model isn't
+just complex algorithms, but also a deep understanding of the data
+itself. So, in my future work, I will focus more on the validation
+process to ensure my analysis is meaningful.
+
+Overall, these classification techniques not only enhanced my
+understanding of remote sensing data but also made me think about how to
+balance the complexity of the technology with the reliability of the
+data in real-world applications. As I become more familiar with these
+methods, I'll pay more attention to how to choose and use them wisely to
+solve practical problems.
+
+\bookmarksetup{startatroot}
+
+\chapter{W9}\label{w9}
+
+\bookmarksetup{startatroot}
+
+\chapter{8 Synthetic Aperture Radar
+(SAR)}\label{synthetic-aperture-radar-sar}
+
+This week we studied Synthetic Aperture Radar (SAR), a unique remote
+sensing system that captures surface information using microwaves.
+Unlike optical sensors, SAR provides two key data types - amplitude and
+phase - enabling all-weather Earth observation.~
+
+\section{8.1 Summary}\label{summary-6}
+
+Synthetic Aperture Radar (SAR) provides unique Earth observation
+capabilities through its two fundamental
+measurements:~\textbf{amplitude}~(signal strength)
+and~\textbf{phase}~(wave cycle position). As illustrated in Figure,
+these measurements reveal complementary information - while amplitude
+highlights surface texture variations (e.g., bright urban areas versus
+dark water bodies), phase data enables millimeter-scale deformation
+monitoring through interferometric analysis (InSAR). This dual-data
+nature makes SAR exceptionally valuable for applications ranging from
+disaster response to infrastructure monitoring.
+
+\includegraphics{index_files/mediabag/Fig-A2-Images-of-amp.png}
+
+Images of amplitude (left) and phase difference (right) for ERS SAR data
+spanning the 1999 Hector Mine Earthquake
+\href{https://www.researchgate.net/figure/Fig-A2-Images-of-amplitude-left-and-phase-difference-right-for-ERS-SAR-data_fig8_256830372}{Source}
+
+The choice of radar wavelength significantly impacts observation
+capabilities, as detailed in Table. Shorter wavelengths like X-band (3
+cm) provide detailed surface information but limited penetration, making
+them ideal for ice and snow monitoring. The commonly used C-band (5 cm)
+offers balanced capabilities for agricultural and disaster monitoring,
+while L-band's longer wavelength (23 cm) penetrates vegetation canopies,
+enabling forest structure analysis and permafrost studies. This
+wavelength-dependent penetration is particularly crucial when selecting
+data for specific research needs.
+
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+Band & Wavelength & Penetration Depth & Best For \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+X & \textasciitilde3 cm & Leaves & Ice/snow monitoring \\
+C & \textasciitilde5 cm & Canopy top & Agriculture, disasters \\
+L & \textasciitilde23 cm & Through vegetation & Deforestation,
+permafrost \\
+\end{longtable}
+
+Three additional factors critically influence SAR interpretation:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Polarization configurations determine target interactions - VV
+  polarization enhances horizontal features like roads, whereas VH
+  reveals volumetric scattering from vegetation.
+\item
+  Surface dielectric properties affect reflectivity, with moist surfaces
+  typically appearing brighter in SAR images.
+\item
+  Data scaling (power, amplitude, or decibel) determines analytical
+  approaches, where: Power scale preserves original values for
+  statistical modeling/ Amplitude scale improves visual interpretation/
+  dB scaling (logarithmic) enhances contrast for change detection
+\end{enumerate}
+
+In Google Earth Engine, these principles become operational through
+Sentinel-1's default dB-scaled data, though users can convert to other
+scales as needed. The integration of these technical parameters with
+practical visual examples (Figures/Tables) creates a comprehensive
+foundation for effective SAR analysis across diverse environmental
+monitoring applications.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{8.2 Applications}\label{applications-5}
+
+The 2024 review article ``SAR Features and Techniques for Urban
+Planning'' published in~Remote Sensing~presents a comprehensive
+examination of Synthetic Aperture Radar (SAR) applications in urban
+environments. Authored by researchers from the University of Patras, the
+study systematically analyzes SAR's operational advantages over optical
+remote sensing, particularly its unique capacity for all-weather,
+day-night data acquisition and sensitivity to both geometric and
+dielectric properties of urban structures. The review emphasizes how
+SAR's multi-dimensional data capture - including amplitude (surface
+reflectivity), phase (for deformation monitoring via InSAR), and
+polarimetric information (for material characterization) - combined with
+optical data fusion techniques, significantly enhances urban mapping
+accuracy for critical planning applications.
+
+The authors thoroughly document SAR's transformative impact across three
+primary urban planning domains. For urban expansion monitoring,
+time-series SAR analysis enables precise tracking of informal
+settlements and urban sprawl patterns, while advanced texture-based
+classification methods improve discrimination of urban features. In
+infrastructure management, SAR's millimeter-precision deformation
+monitoring capabilities through InSAR technology have proven invaluable
+for assessing building stability and underground construction impacts,
+with demonstrated success in case studies like Shanghai's metro system.
+Perhaps most innovatively, tomographic SAR techniques are
+revolutionizing 3D urban modeling by overcoming the layover effects that
+traditionally limited radar imaging in dense urban areas, outperforming
+LiDAR in consistent all-weather performance.
+
+Emerging technological integrations form a key focus of the review,
+particularly the growing synergy between deep learning approaches like
+convolutional neural networks and SAR data processing, which is
+automating complex urban feature extraction tasks. The authors highlight
+promising developments in SAR-IoT sensor fusion for real-time urban
+monitoring systems and the expanding role of SAR-derived data in smart
+city GIS platforms. However, the review also critically examines
+persistent challenges including SAR's inherent data complexity due to
+speckle noise and non-intuitive backscatter patterns, the computational
+intensity of high-resolution tomographic processing, and the current
+lack of standardized analysis frameworks for urban SAR applications.
+
+The methodology followed in this work comprises the three different
+tested classification schemes
+\href{https://www.researchgate.net/publication/380914201_SAR_Features_and_Techniques_for_Urban_Planning-A_Review}{Source}
+
+\textbf{References}:
+
+Koukiou, G. (2024) SAR Features and Techniques for Urban Planning---A
+Review. \emph{Remote sensing (Basel, Switzerland)}. {[}Online{]} 16
+(11), 1923-.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{8.3 Reflection}\label{reflection-6}
+
+Although I had learned the basics of SAR in previous courses, diving
+deeper into phase information and interferometry has been particularly
+fascinating to me. I used to think of SAR as just another way of
+``taking pictures,'' so discovering how it can detect centimeter-scale
+ground movements through microwave phase shifts completely changed my
+understanding of remote sensing.
+
+At first, I struggled with some of these concepts---especially how phase
+data translates into surface deformation. But when I finally saw
+interferometric SAR (InSAR) results showing actual ground displacement,
+that ``aha!'' moment was incredibly rewarding. The fact that this
+technology can monitor earthquakes, volcanic activity, and even building
+subsidence makes it far more powerful than traditional optical remote
+sensing.
+
+However, I've also realized that mastering SAR analysis isn't easy. The
+preprocessing steps are complex, interpretation requires experience, and
+results can be sensitive to various noise sources. When I tried running
+simple case studies in GEE, I noticed the same algorithm could produce
+very different results depending on the region---which made me
+appreciate why called SAR ``both powerful and finicky.''
+
+Looking ahead, I want to focus on two key areas: First, time-series
+analysis, since SAR's biggest advantage is its all-weather monitoring
+capability. Second, exploring fusion with optical data to compensate for
+the limitations of single-source analysis. Even though my skills are
+still developing, every time I successfully process a meaningful SAR
+image, the sense of accomplishment is really motivating.
+
+The learning curve for SAR may be steep, but each step forward reveals
+new perspectives. Perhaps that's the beauty of remote sensing---we're
+not just analyzing data, but learning how to ``see'' invisible changes
+in our world.
+
+
+
+\end{document}

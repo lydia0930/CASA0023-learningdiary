@@ -1,7 +1,6 @@
 ---
 title: "W8"
 format: html
-editor: visual
 ---
 
 # 7 Classification II
