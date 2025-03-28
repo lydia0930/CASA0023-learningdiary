@@ -2,9 +2,6 @@
 title: "Policy"
 format: html
 ---
-
-# Policy
-
 Week 4 focused on the applications of remote sensing to policy, and I
 made a case study in Singapore.
 

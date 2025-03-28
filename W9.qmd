@@ -2,9 +2,6 @@
 title: "Synthetic Aperture Radar (SAR)"
 format: html
 ---
-
-# Synthetic Aperture Radar (SAR)
-
 This week we studied Synthetic Aperture Radar (SAR), a unique remote sensing system that captures surface information using microwaves. Unlike optical sensors, SAR provides two key data types - amplitude and phase - enabling all-weather Earth observation. 
 
 ## Summary

@@ -2,9 +2,6 @@
 title: "Remote Sensing Data & Corrections"
 output: html_document  
 ---
-
-# Remote Sensing Data & Corrections
-
 ## Summary
 
 In this lecture, I learned about the fundamentals of remote sensing,

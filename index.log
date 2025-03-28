@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.29)  29 MAR 2025 01:05
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.29)  29 MAR 2025 01:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -926,115 +926,85 @@ chapter 3.
 [5
 
 ]
-chapter 4.
-
-
-[6
-
-]
 File: index_files/mediabag/denmark_oli_1985-201.png Graphic file (type bmp)
 <index_files/mediabag/denmark_oli_1985-201.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 336--340
+Underfull \hbox (badness 10000) in paragraph at lines 333--337
 [][]
  []
 
 
 
+[6]
+
 [7]
 
 [8]
+chapter 4.
 
-[9]
+
+[9
+
+]
 chapter 5.
 
 
 [10
 
 ]
+
+[11]
+
+[12]
+
+[13]
 chapter 6.
 
 
-[11
-
-]
-chapter 7.
-
-
-[12
-
-]
-chapter 8.
-
-
-[13
-
-]
-
-[14]
-
-[15]
-
-[16]
-chapter 9.
-
-
-[17
-
-]
-chapter 10.
-
-
-[18
+[14
 
 ]
 File: index_files/mediabag/image_2022_12_09T06_.png Graphic file (type bmp)
 <index_files/mediabag/image_2022_12_09T06_.png>
 
 
-[19]
+[15]
 
-[20]
+[16]
 
-[21]
+[17]
 
-[22]
+[18]
 File: index_files/mediabag/parkroyal-on-pickeri.jpg Graphic file (type bmp)
 <index_files/mediabag/parkroyal-on-pickeri.jpg>
 
 
-[23]
-chapter 11.
-
-
-[24
-
-]
-chapter 12.
+[19]
+chapter 7.
 File: index_files/mediabag/NDVI.jpg Graphic file (type bmp)
 <index_files/mediabag/NDVI.jpg>
 
 
-[25
+[20
 
 ]
 
-[26]
+[21]
 ! Unable to load picture or PDF file 'index_files/mediabag/remotesensing-12-016.jpg'.
 <to be read again> 
                    }
-l.981 ..._files/mediabag/remotesensing-12-016.jpg}
+l.961 ..._files/mediabag/remotesensing-12-016.jpg}
                                                   
 The requested image couldn't be read because
 it was not a recognized image format.
 
  
 Here is how much of TeX's memory you used:
- 23988 strings out of 475787
- 464352 string characters out of 5771314
+ 23986 strings out of 475787
+ 464340 string characters out of 5771314
  1176743 words of memory out of 5000000
- 46657 multiletter control sequences out of 15000+600000
+ 46655 multiletter control sequences out of 15000+600000
  562425 words of font info for 68 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 108i,8n,114p,10900b,453s stack positions out of 10000i,1000n,20000p,200000b,200000s
-Output written on index.pdf (26 pages).
+ 108i,8n,114p,10900b,451s stack positions out of 10000i,1000n,20000p,200000b,200000s
+Output written on index.pdf (21 pages).

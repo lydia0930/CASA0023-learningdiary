@@ -3,8 +3,6 @@ title: "Presentation"
 format: html
 ---
 
-# Presentation
-
 These are the introduction slides for the sensor ASTER(Advanced Spaceborne Thermal Emission and Reflection Radiometer)
 
 

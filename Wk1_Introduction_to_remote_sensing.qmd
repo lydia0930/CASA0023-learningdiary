@@ -2,16 +2,13 @@
 title: "Introduction"
 format: html
 ---
+## Summary
 
-# An Introduction to Remote Sensing
-
-##Summary
-
-###Definition of remote sensing
+### Definition of remote sensing
 
 Remote sensing is the science of obtaining information about objects or areas from a distance using sensors that detect electromagnetic radiation. The electromagnetic spectrum is crucial to understanding which wavelengths are useful for different applications. The key diagram to include would be the electromagnetic spectrum chart showing different wavelengths and their applications in remote sensing.
 
-###Resolution Types in Remote Sensing
+### Resolution Types in Remote Sensing
 
 The four essential resolution types determine what can be detected:
 

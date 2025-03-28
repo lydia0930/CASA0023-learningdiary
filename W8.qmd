@@ -2,9 +2,6 @@
 title: "Classification II"
 format: html
 ---
-
-#  Classification II
-
 ##  Summary
 
 In this week's lecture, we explored the evolution of data processing methods in remote sensing, starting with traditional pixel-based analysis and progressing to more advanced techniques.

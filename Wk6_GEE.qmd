@@ -2,9 +2,6 @@
 title: "Google Earth Engine"
 format: html
 ---
-
-# Google Earth Engine
-
 The week mainly focuses on utilizing Google Earth Engine (GEE) for remote sensing data processing, covering key functions such as image filtering, NDVI computation, mosaicking, and spatial analysis for urban and environmental applications.
 
 ## Summary
