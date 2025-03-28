@@ -3,9 +3,9 @@ title: "Wk3_Corrections"
 output: html_document  
 ---
 
-# 3 Classification I
+# Classification I
 
-## 3.1 Summary
+## Summary
 
 In this lecture, I learned about the fundamentals of remote sensing,
 focusing on data acquisition, sensor technologies, data processing, and
@@ -13,7 +13,7 @@ their applications in urban and environmental studies. The session was
 divided into two main parts: image correction and data mosaicing and
 enhancement. Below are the key takeaways:
 
-### 3.1.1 Sensor Types and Mechanisms
+### Sensor Types and Mechanisms
 
 Remote sensing sensors are at the core of remote sensing technology, and
 different types of sensors employ different imaging mechanisms. The
@@ -29,7 +29,7 @@ Through these different sensor technologies, remote sensing systems are
 able to capture various types of land feature data based on specific
 needs.
 
-### 3.1.2 Data Correction Process
+### Data Correction Process
 
 Satellite imagery often requires correction before it can be used for
 analysis. The following diagram shows the typical correction process:
@@ -50,7 +50,7 @@ usability of remote sensing imagery. By applying geometric correction,
 atmospheric correction, and terrain correction, we can eliminate
 external disturbances and improve the precision of the data.
 
-### 3.1.3 Data Mosaicing and Enhancement
+### Data Mosaicing and Enhancement
 
 Mosaicing and enhancement techniques are vital for improving remote
 sensing imagery, especially for urban and environmental studies.
@@ -72,13 +72,13 @@ consideration.
 
 ------------------------------------------------------------------------
 
-## 3.2 Applications
+## Applications
 
 Landsat satellites, providing over 50 years of Earth observation data
 since 1972, have had a profound impact on monitoring urban growth,
 deforestation, temperature changes, and more.
 
-### 3.2.1 Urban Growth & Land Use Mapping
+### Urban Growth & Land Use Mapping
 
 One of the most powerful applications of remote sensing is its ability
 to monitor urban growth and land use changes over time. Satellites like
@@ -98,7 +98,7 @@ can be monitored using thermal infrared data, which helps identify
 regions that are overheating due to dense urbanization and limited
 vegetation.
 
-### 3.2.2 Environmental Monitoring & Disaster Response
+### Environmental Monitoring & Disaster Response
 
 Remote sensing also plays a critical role in environmental monitoring,
 particularly in disaster response and management. Landsat and Sentinel-2
@@ -119,7 +119,7 @@ degradation, drought, or pest infestations.
 
 ------------------------------------------------------------------------
 
-## 3.3 Reflection
+## Reflection
 
 This week's practical exercise on atmospheric correction provided
 invaluable hands-on experience that deepened my understanding of the

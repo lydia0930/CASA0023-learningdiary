@@ -1,13 +1,13 @@
 ---
-title: "W7"
+title: "Classification II"
 format: html
 ---
 
-# 6 Classification I
+# Classification I
 
 The sixth lecture of CASA0023 covers remote sensing classification techniques, which are crucial for interpreting satellite and aerial imagery. These methods are used to classify land cover and land use, and they are key in urban planning, environmental monitoring, and disaster management.
 
-## 6.1 Summary
+## Summary
 
 Classification assigns pixels in remote sensing images to predefined categories. The primary classification methods are:
 
@@ -18,7 +18,7 @@ Classification assigns pixels in remote sensing images to predefined categories.
 
 Supervised vs Unsupervised Classification [Source](https://medium.com/@recrosoft.io/supervised-vs-unsupervised-learning-key-differences-cdd46206cdcb)
 
-### 6.1.1 Supervised Classification
+### Supervised Classification
 
 Supervised classification involves four main steps:
 
@@ -30,7 +30,7 @@ Supervised classification involves four main steps:
 
 -   **Accuracy Assessment**: The classification result is evaluated using metrics like confusion matrices to assess its accuracy.
 
-### 6.1.2 Unsupervised Classification
+### Unsupervised Classification
 
 Unsupervised classification uses the algorithm to group data based on pixel similarity, without predefined labels. The steps are:
 
@@ -42,7 +42,7 @@ Unsupervised classification uses the algorithm to group data based on pixel simi
 
 ------------------------------------------------------------------------
 
-## 6.2 Applications
+## Applications
 
 Remote sensing classification techniques, particularly supervised and unsupervised methods, have numerous applications in various research fields, urban planning, and policy-making. These methods are extensively used for land use and land cover (LULC) mapping, providing essential insights into urban growth, environmental changes, and resource management.
 
@@ -64,7 +64,7 @@ Misbah, K., et al. (2022). Multi-sensors remote sensing applications for assessi
 
 ------------------------------------------------------------------------
 
-## 6.3 Reflection
+## Reflection
 
 This week’s lecture on remote sensing classification techniques provided a valuable overview of how geospatial data can be leveraged in urban and environmental research. I gained a solid understanding of the two primary classification methods—supervised and unsupervised classification—and how they can be applied in various contexts such as land cover mapping, disaster assessment, and environmental monitoring. The practical examples were particularly insightful, as they demonstrated the real-world utility of these techniques.
 

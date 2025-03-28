@@ -1,13 +1,13 @@
 ---
-title: "Wk6_GEE"
+title: "Google Earth Engine"
 format: html
 ---
 
-# 5 Google Earth Engine
+# Google Earth Engine
 
 The week mainly focuses on utilizing Google Earth Engine (GEE) for remote sensing data processing, covering key functions such as image filtering, NDVI computation, mosaicking, and spatial analysis for urban and environmental applications.
 
-## 5.1 Summary
+## Summary
 
 In this week's lecture, we explored Google Earth Engine (GEE) and its application in processing remote sensing data. GEE is a cloud-based geospatial analysis platform that allows large-scale processing of satellite imagery.
 
@@ -40,7 +40,7 @@ This lecture reinforced the importance of cloud computing in geospatial analysis
 
 ------------------------------------------------------------------------
 
-## 5.2 Applications
+## Applications
 
 GEE plays a crucial role in urban studies, environmental monitoring, and policy analysis, offering scalable solutions for spatial data processing. It is widely used in land-use classification, climate change research, and urban heat island analysis.
 
@@ -62,7 +62,7 @@ Hansen, M. C., Potapov, P. V., Moore, R., Hancher, M., Turubanova, S. A., Tyukav
 
 ------------------------------------------------------------------------
 
-## 5.3 Reflection
+## Reflection
 
 This week was my first introduction to Google Earth Engine (GEE), and it’s been an exciting start to exploring how cloud-based platforms can transform remote sensing analysis. GEE’s ability to process large-scale satellite imagery efficiently is impressive, and it’s truly fascinating that it allows for analysis at a global scale while also enabling a zoomed-in focus on specific countries or regions. As a beginner, I found it easy to filter and visualize Landsat data, and the speed of processing was a big advantage compared to traditional methods. The hands-on approach of working directly with satellite imagery, like computing NDVI to analyze vegetation health, was a valuable learning experience.
 

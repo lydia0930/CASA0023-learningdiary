@@ -3,15 +3,15 @@ title: "Wk1_Introduction_to_remote_sensing"
 format: html
 ---
 
-# 1 An Introduction to Remote Sensing
+# An Introduction to Remote Sensing
 
-## 1.1 Summary
+##Summary
 
-### 1.1.1 Definition of remote sensing
+###Definition of remote sensing
 
 Remote sensing is the science of obtaining information about objects or areas from a distance using sensors that detect electromagnetic radiation. The electromagnetic spectrum is crucial to understanding which wavelengths are useful for different applications. The key diagram to include would be the electromagnetic spectrum chart showing different wavelengths and their applications in remote sensing.
 
-### 1.1.2. Resolution Types in Remote Sensing
+###Resolution Types in Remote Sensing
 
 The four essential resolution types determine what can be detected:
 
@@ -24,17 +24,17 @@ The four essential resolution types determine what can be detected:
 
 It Includes the comparative images showing the same area captured at different spatial resolutions (e.g., 30m vs. 10m) to illustrate how detail changes.
 
-### 1.1.3. Satellite Systems and Their Applications
+### Satellite Systems and Their Applications
 
 Major satellite programs like Landsat (historical importance since 1972) and Sentinel (newer European missions) provide different capabilities for urban monitoring. The lecture highlights specifications including revisit time, spatial resolution, and spectral bands. Include the satellite timeline diagram showing the evolution of Earth observation satellites and their operational periods.
 
-### 1.1.4. Urban Remote Sensing Applications
+### Urban Remote Sensing Applications
 
 Remote sensing enables monitoring urban environments through applications like land use classification, urban heat island detection, and change detection over time. The thermal imagery showing urban heat islands and comparison images of urban growth over decades would be essential visuals.
 
 ------------------------------------------------------------------------
 
-## 1.2 Applications
+## Applications
 
 In my research on remote sensing applications, I have found that these technologies provide tools for understanding the urban environment.
 
@@ -48,7 +48,7 @@ Finally, remote sensing appears to have the most significant impact in disaster 
 
 ------------------------------------------------------------------------
 
-## 1.3 Reflection
+## Reflection
 
 As I engaged with the fundamentals of remote sensing, several thoughtful connections emerged about this technology's place in science and society.
 

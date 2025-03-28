@@ -1,13 +1,13 @@
 ---
-title: "W9"
+title: "Synthetic Aperture Radar (SAR)"
 format: html
 ---
 
-# 8 Synthetic Aperture Radar (SAR)
+# Synthetic Aperture Radar (SAR)
 
 This week we studied Synthetic Aperture Radar (SAR), a unique remote sensing system that captures surface information using microwaves. Unlike optical sensors, SAR provides two key data types - amplitude and phase - enabling all-weather Earth observation. 
 
-## 8.1 Summary
+## Summary
 
 Synthetic Aperture Radar (SAR) provides unique Earth observation capabilities through its two fundamental measurements: **amplitude** (signal strength) and **phase** (wave cycle position). As illustrated in Figure, these measurements reveal complementary information - while amplitude highlights surface texture variations (e.g., bright urban areas versus dark water bodies), phase data enables millimeter-scale deformation monitoring through interferometric analysis (InSAR). This dual-data nature makes SAR exceptionally valuable for applications ranging from disaster response to infrastructure monitoring.
 
@@ -33,7 +33,7 @@ In Google Earth Engine, these principles become operational through Sentinel-1's
 
 ------------------------------------------------------------------------
 
-## 8.2 Applications
+## Applications
 
 The 2024 review article "SAR Features and Techniques for Urban Planning" published in Remote Sensing presents a comprehensive examination of Synthetic Aperture Radar (SAR) applications in urban environments. Authored by researchers from the University of Patras, the study systematically analyzes SAR's operational advantages over optical remote sensing, particularly its unique capacity for all-weather, day-night data acquisition and sensitivity to both geometric and dielectric properties of urban structures. The review emphasizes how SAR's multi-dimensional data capture - including amplitude (surface reflectivity), phase (for deformation monitoring via InSAR), and polarimetric information (for material characterization) - combined with optical data fusion techniques, significantly enhances urban mapping accuracy for critical planning applications.
 
@@ -51,7 +51,7 @@ Koukiou, G. (2024) SAR Features and Techniques for Urban Planning—A Review. *R
 
 ------------------------------------------------------------------------
 
-## 8.3 Reflection
+## Reflection
 
 Although I had learned the basics of SAR in previous courses, diving deeper into phase information and interferometry has been particularly fascinating to me. I used to think of SAR as just another way of "taking pictures," so discovering how it can detect centimeter-scale ground movements through microwave phase shifts completely changed my understanding of remote sensing.
 

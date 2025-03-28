@@ -3,14 +3,14 @@ title: "Wk4_Policy"
 format: html
 ---
 
-# 4 Policy
+# Policy
 
 Week 4 focused on the applications of remote sensing to policy, and I
 made a case study in Singapore.
 
-## 4.1 Summary
+## Summary
 
-### 4.1.1 City Summary
+### City Summary
 
 Singapore is a highly urbanized city-state located at the southern tip
 of the Malay Peninsula in Southeast Asia. With a land area of just 728
@@ -21,7 +21,7 @@ imports over 90% of its food supply, vulnerability to climate change
 effects like sea-level rise, and urban heat island intensification due
 to its dense urban development.
 
-### 4.1.2 Policy Summary
+### Policy Summary
 
 1.  **Global Policy Overview**:
 
@@ -63,13 +63,13 @@ to its dense urban development.
 
 ------------------------------------------------------------------------
 
-## 4.2 Application
+## Application
 
 This section identifies how remotely sensed data could be used to
 contribute to Singapore's policy goals, answering the question: **'How
 could the data be applied to solve the policy challenge?'**
 
-### 4.2.1 Data Sources
+### Data Sources
 
 Singapore employs multiple remote sensing platforms to support its Green
 Plan implementation:
@@ -92,7 +92,7 @@ Plan implementation:
     -   Essential for vegetation structure analysis and building-level
         energy studies.
 
-### 4.2.2 Techniques
+### Techniques
 
 -   **Urban Heat Island Monitoring**
 
@@ -139,7 +139,7 @@ https://www.greenplan.gov.sg/
 
 ------------------------------------------------------------------------
 
-## 4.3 Reflection
+## Reflection
 
 Singapore's application of remote sensing technologies to support its
 Green Plan 2030 demonstrates how a land-constrained city-state can

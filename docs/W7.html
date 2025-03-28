@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CASA0023 Learning Diary - 7&nbsp; W7</title>
+<title>CASA0023 Learning Diary - 7&nbsp; Classification II</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./W7.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">W7</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./W7.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -145,19 +145,19 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./W7.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">W7</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./W8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">W8</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Classification II</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./W9.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">W9</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Synthetic Aperture Radar (SAR)</span></span></a>
   </div>
 </li>
     </ul>
@@ -170,15 +170,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#classification-i" id="toc-classification-i" class="nav-link active" data-scroll-target="#classification-i"><span class="header-section-number">8</span> 6 Classification I</a>
+  <li><a href="#classification-i" id="toc-classification-i" class="nav-link active" data-scroll-target="#classification-i"><span class="header-section-number">8</span> Classification I</a>
   <ul class="collapse">
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">8.1</span> 6.1 Summary</a>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">8.1</span> Summary</a>
   <ul class="collapse">
-  <li><a href="#supervised-classification" id="toc-supervised-classification" class="nav-link" data-scroll-target="#supervised-classification"><span class="header-section-number">8.1.1</span> 6.1.1 Supervised Classification</a></li>
-  <li><a href="#unsupervised-classification" id="toc-unsupervised-classification" class="nav-link" data-scroll-target="#unsupervised-classification"><span class="header-section-number">8.1.2</span> 6.1.2 Unsupervised Classification</a></li>
+  <li><a href="#supervised-classification" id="toc-supervised-classification" class="nav-link" data-scroll-target="#supervised-classification"><span class="header-section-number">8.1.1</span> Supervised Classification</a></li>
+  <li><a href="#unsupervised-classification" id="toc-unsupervised-classification" class="nav-link" data-scroll-target="#unsupervised-classification"><span class="header-section-number">8.1.2</span> Unsupervised Classification</a></li>
   </ul></li>
-  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">8.2</span> 6.2 Applications</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">8.3</span> 6.3 Reflection</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">8.2</span> Applications</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">8.3</span> Reflection</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -188,7 +188,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">W7</span></h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II</span></h1>
 </div>
 
 
@@ -206,10 +206,10 @@ ul.task-list li input[type="checkbox"] {
 
 
 <section id="classification-i" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> 6 Classification I</h1>
+<h1 data-number="8"><span class="header-section-number">8</span> Classification I</h1>
 <p>The sixth lecture of CASA0023 covers remote sensing classification techniques, which are crucial for interpreting satellite and aerial imagery. These methods are used to classify land cover and land use, and they are key in urban planning, environmental monitoring, and disaster management.</p>
 <section id="summary" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">8.1</span> 6.1 Summary</h2>
+<h2 data-number="8.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">8.1</span> Summary</h2>
 <p>Classification assigns pixels in remote sensing images to predefined categories. The primary classification methods are:</p>
 <ul>
 <li><strong>Supervised Classification</strong>: This method requires labeled training samples to train the classifier. Common algorithms include Maximum Likelihood, Support Vector Machines (SVM), and Random Forest.</li>
@@ -218,7 +218,7 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/0*Uzqy-gqZg77Wun0e.jpg" class="img-fluid"></p>
 <p>Supervised vs Unsupervised Classification <a href="https://medium.com/@recrosoft.io/supervised-vs-unsupervised-learning-key-differences-cdd46206cdcb">Source</a></p>
 <section id="supervised-classification" class="level3" data-number="8.1.1">
-<h3 data-number="8.1.1" class="anchored" data-anchor-id="supervised-classification"><span class="header-section-number">8.1.1</span> 6.1.1 Supervised Classification</h3>
+<h3 data-number="8.1.1" class="anchored" data-anchor-id="supervised-classification"><span class="header-section-number">8.1.1</span> Supervised Classification</h3>
 <p>Supervised classification involves four main steps:</p>
 <ul>
 <li><p><strong>Training Sample Collection</strong>: Representative areas of different land cover types are selected to create labeled training data.</p></li>
@@ -228,7 +228,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 <section id="unsupervised-classification" class="level3" data-number="8.1.2">
-<h3 data-number="8.1.2" class="anchored" data-anchor-id="unsupervised-classification"><span class="header-section-number">8.1.2</span> 6.1.2 Unsupervised Classification</h3>
+<h3 data-number="8.1.2" class="anchored" data-anchor-id="unsupervised-classification"><span class="header-section-number">8.1.2</span> Unsupervised Classification</h3>
 <p>Unsupervised classification uses the algorithm to group data based on pixel similarity, without predefined labels. The steps are:</p>
 <ul>
 <li><p><strong>Defining the Number of Clusters</strong>: A predefined number of clusters is set.</p></li>
@@ -239,7 +239,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </section>
 <section id="applications" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">8.2</span> 6.2 Applications</h2>
+<h2 data-number="8.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">8.2</span> Applications</h2>
 <p>Remote sensing classification techniques, particularly supervised and unsupervised methods, have numerous applications in various research fields, urban planning, and policy-making. These methods are extensively used for land use and land cover (LULC) mapping, providing essential insights into urban growth, environmental changes, and resource management.</p>
 <p>For instance, in urban growth monitoring, remote sensing classification plays a crucial role in mapping the expansion of cities. A study by Seto et al.&nbsp;(2011) applied supervised classification to assess the rate of urban sprawl in Chinese cities, quantifying the spatial extent of urban growth and the changes in land use patterns over several decades. This approach allowed for a better understanding of the environmental implications of urban expansion and helped policymakers address the challenges posed by rapid urbanization.</p>
 <p>In the context of disaster management, remote sensing classification techniques are invaluable for assessing damage after natural disasters. Following Hurricane Katrina, Reif et al.&nbsp;(2011) used remote sensing data to classify areas as damaged or undamaged, providing critical information for recovery efforts. By applying supervised classification methods, they were able to differentiate between flooded and non-flooded regions, allowing for more targeted and efficient disaster relief operations.</p>
@@ -252,7 +252,7 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 </section>
 <section id="reflection" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">8.3</span> 6.3 Reflection</h2>
+<h2 data-number="8.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">8.3</span> Reflection</h2>
 <p>This week’s lecture on remote sensing classification techniques provided a valuable overview of how geospatial data can be leveraged in urban and environmental research. I gained a solid understanding of the two primary classification methods—supervised and unsupervised classification—and how they can be applied in various contexts such as land cover mapping, disaster assessment, and environmental monitoring. The practical examples were particularly insightful, as they demonstrated the real-world utility of these techniques.</p>
 <p>What I found most enlightening was the distinction between supervised and unsupervised classification. Supervised classification, which relies on labeled training samples, seems ideal when prior knowledge is available, but I recognize that it can be resource-intensive and may introduce bias based on the selected training data. On the other hand, unsupervised classification, which groups data based on inherent patterns, can be useful when limited prior knowledge exists, but it can also result in misclassification if the data patterns are too complex or not well-defined. This has made me think critically about the importance of choosing the right classification approach based on the dataset and research context. In future projects, I will need to be mindful of these trade-offs and select the method that best aligns with the research question and available data.</p>
 <p>Another key takeaway was learning about classification accuracy assessment techniques, such as confusion matrices. While they are an essential tool for validating results, I now appreciate that accuracy assessment alone does not guarantee the quality or interpretability of the classification. For example, in complex urban environments, even accurate classifications may not reflect the true complexity of land cover, especially in rapidly changing or heterogeneous areas. This reminds me of the importance of not relying solely on quantitative accuracy but also integrating qualitative insights and domain knowledge into the interpretation of results.</p>
@@ -679,8 +679,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./W8.html" class="pagination-link" aria-label="W8">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">W8</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./W8.html" class="pagination-link" aria-label="Classification II">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Classification II</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
